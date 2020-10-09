@@ -72,6 +72,24 @@ export default class Main extends Component {
             <div className="btn-reverse">BOOK AN APPOINTMENT</div>
           </div>
         </div>
+
+        {/* //////////////Section Three//////// */}
+
+        <div className="section-three section">
+          <div className="text left-side">
+            <div className="section-heading">
+              <span>Apply as a</span>
+              <br />
+              doctor.
+            </div>
+            <div className="subheading">
+              Join our community of doctors and increase your reach as a
+              specialist
+            </div>
+            <div className="btn-reverse">APPLY</div>
+          </div>
+          <div className="image right-side"></div>
+        </div>
       </div>
     );
   }

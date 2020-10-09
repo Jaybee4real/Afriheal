@@ -169,18 +169,42 @@
 }
 
 @media (max-width: 860px) {
-  .section-two {
-    flex-direction: column;
-  }
-
-  .left-side{
+  .section-two,
+  .section-three {
+    .left-side {
       height: 500px;
       width: 100% !important;
+    }
+  }
+
+  .section-two{
+      flex-direction: column;
+  }
+
+  .section-three {
+    flex-direction: column-reverse;
   }
 }
 
 @media (max-width: 500px) {
-    .section-two .left-side{
-        height: 300px;
-    }
+  .section-two .left-side {
+    height: 300px;
+  }
+}
+
+/////////////Section Three//////////
+
+.section-three {
+  background-image: url(../img/bg2.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .image {
+    width: 50vw;
+    background-image: url(../img/Doctor_image.svg);
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
 }
