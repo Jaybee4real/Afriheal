@@ -1,0 +1,135 @@
+@import "../index.scss";
+
+.section {
+  height: 100vh;
+  max-height: 890px;
+  padding: 2rem 10vw;
+
+  .section-heading {
+    font-size: 2.3rem;
+    color: $theme-color;
+    font-weight: 600;
+    span {
+      color: grey;
+    }
+  }
+
+  .row-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+    justify-content: space-between;
+
+    .row {
+      width: 320px;
+      min-height: 500px;
+      position: relative;
+      display: flex;
+
+      &:nth-of-type(1) .image {
+        background-image: url(../img/row1.svg);
+      }
+
+      &:nth-of-type(2) .image {
+        background-image: url(../img/row2.svg);
+      }
+
+      &:nth-of-type(3) .image {
+        background-image: url(../img/row3.svg);
+      }
+
+      .image {
+        height: 40%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 3rem;
+      }
+
+      .heading {
+        color: grey;
+        font-size: 1.4rem;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 30%;
+          background-color: $theme-color;
+          top: -1.5rem;
+        }
+      }
+
+      .card-body {
+        color: lightslategray;
+        font-size: 0.95rem;
+        padding-right: 10%;
+        line-height: 1.65rem;
+      }
+    }
+  }
+}
+
+.section-one {
+  .question {
+    text-align: center;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    width: 100%;
+    color: $theme-color;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1150px) {
+  .row-container {
+    flex-direction: column !important;
+
+    .row {
+      width: 100% !important;
+      flex-direction: row-reverse;
+      min-height: fit-content !important;
+      margin: 2rem 0;
+
+      &:nth-of-type(2) {
+        flex-direction: row;
+
+        .image {
+          margin-right: 1rem;
+        }
+      }
+
+      .image {
+        height: 100%;
+        width: 50%;
+        height: 300px !important;
+      }
+
+      .text {
+        width: 50%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .row-container {
+    .row {
+      flex-direction: column;
+      &:nth-of-type(2) {
+        flex-direction: column !important;
+      }
+      .image,
+      .text {
+        width: 100% !important;
+      }
+    }
+  }
+}

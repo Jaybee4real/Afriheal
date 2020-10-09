@@ -2,7 +2,6 @@
 
 header {
   min-height: 690px;
-  position: fixed;
   height: 105vh;
   width: 100%;
   max-height: 890px;
@@ -25,6 +24,7 @@ header {
       color: $theme-color;
       text-align: left;
       width: 100%;
+      font-weight: 600;
 
       span {
         color: grey;
@@ -33,7 +33,7 @@ header {
     }
 
     .subheading {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: lightslategrey;
       margin-top: 1.2rem;
       width: 100%;
@@ -55,32 +55,31 @@ header {
   }
 }
 
-@media(max-width: 960px){
-    header{
-        background-size: 100%;
-        background-position: -50% 0%;
-    }
+@media (max-width: 960px) {
+  header {
+    background-size: 100%;
+    background-position: -50% 0%;
+  }
 }
 
-@media(max-width: 700px){
-    .header-right{
-        display: none;
-    }
+@media (max-width: 700px) {
+  .header-right {
+    display: none;
+  }
 
-    .header-left{
-        width: 100vw !important;
-        justify-content: center;
-    }
+  .header-left {
+    width: 100vw !important;
+    justify-content: center;
+  }
 }
 
-@media(max-width:500px){
-    header{
-        background-size: 160%;
-        
+@media (max-width: 500px) {
+  header {
+    background-size: 160%;
 
-        .header-left{
-            justify-content: flex-start;
-            padding-top: 240px;
-        }
+    .header-left {
+      justify-content: flex-start;
+      padding-top: 240px;
     }
+  }
 }

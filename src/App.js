@@ -5,6 +5,7 @@ import Main from './components/Main';
 import "./index.scss";
 import "./styles/navbar.scss";
 import "./styles/header.scss";
+import "./styles/main.scss";
 
 
 function App() {

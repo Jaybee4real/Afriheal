@@ -7,7 +7,7 @@ export default class Header extends Component {
         <div className="header-left">
           <div className="heading">
             <span>Take Charge</span> <br/>
-            Of Your Health
+            Of Your Health!
           </div>
           <p className="subheading">A one-stop shop for your health needs, Online!</p>
 
