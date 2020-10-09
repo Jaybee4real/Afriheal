@@ -37,6 +37,9 @@ $theme-color: #54bf9b;
   border-radius: 5px;
   padding: 0.4rem;
   border: 2px solid $theme-color !important;
+  max-width: fit-content;
+  transition: .4s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background-color: $theme-color;
@@ -50,6 +53,9 @@ $theme-color: #54bf9b;
   color: white !important;
   background-color: $theme-color;
   border: 2px solid $theme-color !important;
+  max-width: fit-content;
+  transition: .4s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background-color: white;

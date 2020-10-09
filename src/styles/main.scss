@@ -1,7 +1,7 @@
 @import "../index.scss";
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   max-height: 890px;
   padding: 2rem 10vw;
 
@@ -34,7 +34,7 @@
       &:nth-of-type(2) .image {
         background-image: url(../img/row2.svg);
         position: relative;
-        top: .5rem;
+        top: 0.5rem;
       }
 
       &:nth-of-type(3) .image {
@@ -73,6 +73,13 @@
       }
     }
   }
+
+  .subheading {
+    color: lightslategrey;
+    margin: 1.5rem 0;
+    padding-right: 15%;
+    font-size: 0.95rem;
+  }
 }
 
 .section-one {
@@ -90,6 +97,10 @@
 }
 
 @media (max-width: 1150px) {
+  .section-one {
+    max-height: fit-content !important;
+  }
+
   .row-container {
     flex-direction: column !important;
 
@@ -134,4 +145,42 @@
       }
     }
   }
+}
+
+/////////////Section Two//////
+
+.section-two {
+  display: flex;
+  flex-direction: row;
+  .left-side {
+    width: 70%;
+    background-image: url(../img/Online_call.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 3vw;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 860px) {
+  .section-two {
+    flex-direction: column;
+  }
+
+  .left-side{
+      height: 500px;
+      width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+    .section-two .left-side{
+        height: 300px;
+    }
 }

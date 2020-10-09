@@ -57,6 +57,21 @@ export default class Main extends Component {
             </div>
           </div>
         </div>
+        {/* //////////////Section Two//////// */}
+
+        <div className="section-two section">
+          <div className="left-side image"></div>
+          <div className="right-side text">
+            <div className="section-heading">
+              <span>Get in touch</span> <br />
+              with the best doctors!
+            </div>
+            <p className="subheading">
+              Book appointments with many of our MCAN verified doctors online
+            </p>
+            <div className="btn-reverse">BOOK AN APPOINTMENT</div>
+          </div>
+        </div>
       </div>
     );
   }
