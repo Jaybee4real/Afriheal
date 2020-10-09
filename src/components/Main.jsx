@@ -90,6 +90,14 @@ export default class Main extends Component {
           </div>
           <div className="image right-side"></div>
         </div>
+
+        {/* //////////////Section Four//////// */}
+
+        <div className="course-section section">
+          <div className="content-wrapper">
+              
+          </div>
+        </div>
       </div>
     );
   }
