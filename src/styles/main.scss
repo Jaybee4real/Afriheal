@@ -1,0 +1,302 @@
+@import "../index.scss";
+
+.section {
+  min-height: 100vh;
+  max-height: 890px;
+  padding: 2rem 10vw;
+
+  .section-heading {
+    font-size: 2.3rem;
+    color: $theme-color;
+    font-weight: 600;
+    span {
+      color: grey;
+    }
+  }
+
+  .row-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+    justify-content: space-between;
+
+    .row {
+      width: 320px;
+      min-height: 500px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &:nth-of-type(1) .image {
+        background-image: url(../img/row1.svg);
+      }
+
+      &:nth-of-type(2) .image {
+        background-image: url(../img/row2.svg);
+        position: relative;
+        top: 0.5rem;
+      }
+
+      &:nth-of-type(3) .image {
+        background-image: url(../img/row3.svg);
+      }
+
+      .image {
+        height: 40%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .heading {
+        color: grey;
+        font-size: 1.4rem;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 30%;
+          background-color: $theme-color;
+          top: -1.5rem;
+        }
+      }
+
+      .card-body {
+        color: lightslategray;
+        font-size: 0.95rem;
+        padding-right: 10%;
+        line-height: 1.65rem;
+      }
+    }
+  }
+
+  .subheading {
+    color: lightslategrey;
+    margin: 1.5rem 0;
+    padding-right: 15%;
+    font-size: 0.95rem;
+  }
+}
+
+.section-one {
+  .question {
+    text-align: center;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    width: 100%;
+    color: $theme-color;
+  }
+
+  .section-heading {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1150px) {
+  .section-one {
+    max-height: fit-content !important;
+  }
+
+  .row-container {
+    flex-direction: column !important;
+
+    .row {
+      width: 100% !important;
+      flex-direction: row-reverse !important;
+      min-height: fit-content !important;
+      margin: 2rem 0;
+
+      &:nth-of-type(2) {
+        flex-direction: row !important;
+
+        .image {
+          margin-right: 1rem;
+        }
+      }
+
+      .image {
+        height: 100%;
+        width: 50%;
+        height: 300px !important;
+      }
+
+      .text {
+        width: 50%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .row-container {
+    .row {
+      flex-direction: column !important;
+      &:nth-of-type(2) {
+        flex-direction: column !important;
+      }
+      .image,
+      .text {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+/////////////Section Two//////
+
+.section-two {
+  display: flex;
+  flex-direction: row;
+  .left-side {
+    width: 70%;
+    background-image: url(../img/Online_call.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 3vw;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 860px) {
+  .section-two,
+  .section-three {
+    .left-side {
+      height: 500px;
+      width: 100% !important;
+    }
+  }
+
+  .section-two {
+    flex-direction: column;
+  }
+
+  .section-three {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-two .left-side {
+    height: 300px;
+  }
+}
+
+/////////////Section Three//////////
+
+.section-three {
+  background-image: url(../img/bg2.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  .image {
+    width: 50vw;
+    background-image: url(../img/Doctor_image.svg);
+    background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
+}
+
+//////////Course Section////////
+
+.course-section {
+  background-image: url(../img/bg2.svg);
+  background-position: 0% 75%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  max-height: fit-content !important;
+
+  .content-wrapper {
+    background-color: rgb(254, 197, 130);
+    min-height: 400px;
+    border-radius: 20px;
+    align-self: center;
+    width: 100%;
+    background-image: url(../img/Mask_Group.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    padding: 6%;
+
+    .right-side{
+      height: 300px;
+      position: relative;
+      width: 35%;
+      background-image: url(../img/girl.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      color: white;
+
+      .heading {
+        font-size: 2rem;
+        margin-bottom: 1.3rem;
+      }
+      .text {
+        font-weight: 200 !important;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+
+        .fas{
+          margin: 0 .5rem;
+        }
+
+        .btn-white{
+          margin-right: 1rem;
+        }
+
+        .btn-reverse{
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width: 720px){
+  .course-section .content-wrapper{
+    flex-direction: column-reverse;
+
+    .left-side, .right-side{
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+
+@media(max-width:340px){
+   .content-wrapper .left-side .buttons{
+    flex-direction: column !important;
+    .btn-white,.btn-reverse{
+      margin: .3rem;
+      max-width: fit-content;
+    }
+  }
+}
