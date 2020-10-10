@@ -11,22 +11,22 @@ export default class Footer extends Component {
           </div>
 
           <div className="col" style={{ paddingTop: '20px'  }}>
-            <a className="link">About Us</a>
-            <a className="link">Contact</a>
-            <a className="link">Terms and conditions</a>
+            <a href="#." className="link">About Us</a>
+            <a href="#." className="link">Contact</a>
+            <a href="#." className="link">Terms and conditions</a>
           </div>
         </div>
         <div className="divider">
           <div className="col-row col">
-            <a>
+            <a href="#.">
               <i class="fab fa-facebook"></i>
               Facebook
             </a>
-            <a>
+            <a href="#.">
               <i class="fab fa-twitter"></i>
               Twitter
             </a>
-            <a>
+            <a href="#.">
               <i class="fab fa-instagram"></i>
               Instagram
             </a>

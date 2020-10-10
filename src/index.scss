@@ -31,6 +31,12 @@ body {
   overflow-x: hidden;
 }
 
+a{
+  text-decoration: none;
+  text-emphasis: none;
+  color: inherit;
+}
+
 $theme-color: #54bf9b;
 
 .btn {
