@@ -218,6 +218,7 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  max-height: fit-content !important;
 
   .content-wrapper {
     background-color: rgb(254, 197, 130);
@@ -226,5 +227,76 @@
     align-self: center;
     width: 100%;
     background-image: url(../img/Mask_Group.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    padding: 6%;
+
+    .right-side{
+      height: 300px;
+      position: relative;
+      width: 35%;
+      background-image: url(../img/girl.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      color: white;
+
+      .heading {
+        font-size: 2rem;
+        margin-bottom: 1.3rem;
+      }
+      .text {
+        font-weight: 200 !important;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+
+        .fas{
+          margin: 0 .5rem;
+        }
+
+        .btn-white{
+          margin-right: 1rem;
+        }
+
+        .btn-reverse{
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width: 720px){
+  .course-section .content-wrapper{
+    flex-direction: column-reverse;
+
+    .left-side, .right-side{
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+
+@media(max-width:340px){
+   .content-wrapper .left-side .buttons{
+    flex-direction: column !important;
+    .btn-white,.btn-reverse{
+      margin: .3rem;
+      max-width: fit-content;
+    }
   }
 }

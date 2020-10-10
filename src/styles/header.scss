@@ -63,8 +63,16 @@ header {
 }
 
 @media (max-width: 700px) {
+
+  header{
+    flex-direction: column-reverse;
+    justify-content: center !important;
+  }
   .header-right {
-    display: none;
+    width: 100vw !important;
+    height: 300px;
+    margin-bottom: 3rem;
+    background-size: contain !important;
   }
 
   .header-left {
@@ -79,7 +87,7 @@ header {
 
     .header-left {
       justify-content: flex-start;
-      padding-top: 240px;
     }
+
   }
 }

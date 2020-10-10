@@ -95,7 +95,32 @@ export default class Main extends Component {
 
         <div className="course-section section">
           <div className="content-wrapper">
-              
+            <div className="left-side">
+              <div className="heading">
+                Take our health literacy course for free and earn a certificate!
+              </div>
+              <p className="text">
+                Strong health literacy enables people to develop the skills and
+                confidence to make informed decisions about thier health and the
+                health of thier families, to effectively navigate health care
+                systems, and to advocate effectively to thier political leaders
+                and policy makers. Take our 10 minutes video course to get
+                informed better.
+              </p>
+
+              <div className="buttons">
+                <div className="btn-white">
+                  Go to course
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+                <div className="btn-reverse">
+                  Learn more
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div className="right-side"></div>
           </div>
         </div>
       </div>
