@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import SignUp from './components/signup.jsx'
+import SignIn from "./components/signin.jsx";
 import "./index.scss";
 import "./styles/navbar.scss";
 import "./styles/footer.scss";
@@ -17,16 +18,17 @@ function App() {
     <Router>
       <Switch>
         <div className="App">
-          <Navbar />
+          {/* <Navbar />
           <Header />
           <Main />
-          <Footer />
-          <SignUp />
+          <Footer /> */}
+          {/* <SignUp /> */}
+          <SignIn />
         </div>
         <Route exact path="/signup" component={SignUp} />
       </Switch>
     </Router>
-  )
+  );
 }
 
 
