@@ -1,31 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
+import LandingPage from './components/landing-page'
 import SignUp from './components/signup.jsx'
 import SignIn from "./components/signin.jsx";
 import "./index.scss";
-import "./styles/navbar.scss";
-import "./styles/footer.scss";
-import "./styles/header.scss";
-import "./styles/main.scss";
+
 
 
 function App() {
   return (
     <Router>
       <Switch>
-        <div className="App">
-          {/* <Navbar />
-          <Header />
-          <Main />
-          <Footer /> */}
-          {/* <SignUp /> */}
-          <SignIn />
-        </div>
+        <Route exact path="/" component={LandingPage} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/signin" component={SignIn} />
       </Switch>
     </Router>
   );
