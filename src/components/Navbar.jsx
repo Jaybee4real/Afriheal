@@ -28,7 +28,28 @@ export default class Navbar extends Component {
               Sign Up
             </a>
           </div>
-          <div className="mobile-nav-toggle"></div>
+        </div>
+        <div className="mobile-nav-toggle"></div>
+        <div className="mobile-nav">
+          <div className="logo"></div>
+          <a href="#." className="mobile-nav-item active">
+            Home
+          </a>
+          <a href="#." className="mobile-nav-item">
+            Blog
+          </a>
+          <a href="#." className="mobile-nav-item">
+            Forums
+          </a>
+          <a href="#." className="mobile-nav-item">
+            Discusisons
+          </a>
+          <a href="#." className="mobile-nav-item">
+            Sign Up
+          </a>
+          <a href="#." className="mobile-nav-item">
+            Contact Us
+          </a>
         </div>
       </>
     );
@@ -36,14 +57,11 @@ export default class Navbar extends Component {
 }
 
 (function () {
-  let scroll = window.pageYOffset;
-
-  document.addEventListener("scroll", function (e) {
-    let navbar = document.querySelector(".navbar-container");
-    let navToggle = document.querySelector(".mobile-nav-toggle");
+  document.addEventListener("scroll", function () {
+    var navbar = document.querySelector(".navbar-container");
+    var navToggle = document.querySelector(".mobile-nav-toggle");
     var offset = window.pageYOffset;
-    scroll = offset;
-    if (scroll > 1) {
+    if (offset > 1) {
       navbar.classList.add("scroll");
       navToggle.classList.add("scroll");
     } else {
