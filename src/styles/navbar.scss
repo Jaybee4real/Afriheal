@@ -167,10 +167,12 @@
     padding-top: 10vw;
     transform: translateX(-100%);
     transition: all .5s ease-in-out;
+    opacity: 0;
 
 
     &.active{
       transform: translateX(0);
+      opacity: 1;
     }
 
 
