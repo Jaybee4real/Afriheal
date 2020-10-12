@@ -5,6 +5,7 @@ $main-color: black;
 .group {
     position: relative;
     margin: 28px 0;
+   
 
     .form-input {
         background-color: white;
@@ -30,6 +31,7 @@ $main-color: black;
     @media (max-width: 768px) {
         .form-input {
             width: 20rem;
+             margin-left: 1rem !important;
            
         }
 
