@@ -12,11 +12,6 @@ ReactDOM.render(
 );
 
 
-document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
-  document.querySelector(".mobile-nav-toggle").classList.toggle("active")
-  document.querySelector(".mobile-nav").classList.toggle("active")
-})
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
