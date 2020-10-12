@@ -56,17 +56,17 @@ export default class Navbar extends Component {
   }
 }
 
-// (function () {
-//   document.addEventListener("scroll", function () {
-//     var navbar = document.querySelector(".navbar-container");
-//     var navToggle = document.querySelector(".mobile-nav-toggle");
-//     var offset = window.pageYOffset;
-//     if (offset > 1) {
-//       navbar.classList.add("scroll");
-//       navToggle.classList.add("scroll");
-//     } else {
-//       navbar.classList.remove("scroll");
-//       navToggle.classList.remove("scroll");
-//     }
-//   });
-// })();
+(function () {
+  document.addEventListener("scroll", function () {
+    var navbar = document.querySelector(".navbar-container");
+    var navToggle = document.querySelector(".mobile-nav-toggle");
+    var offset = window.pageYOffset;
+    if (offset > 1) {
+      navbar.classList.add("scroll");
+      navToggle.classList.add("scroll");
+    } else {
+      navbar.classList.remove("scroll");
+      navToggle.classList.remove("scroll");
+    }
+  });
+})();
