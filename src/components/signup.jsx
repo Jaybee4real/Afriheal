@@ -50,11 +50,11 @@ export default class SignUp extends Component {
               </div>
               <div className="signup-right-container">
                 <div className="img-icon-container">
-                  <img
+                  {/* <img
                     src="/assets/svg/ic-close-48px.svg"
                     className="img-icon"
                     alt="img-icon"
-                  />
+                  /> */}
                 </div>
                 <div className="form-wrapper">
                   <div className="heading-primary-container">
