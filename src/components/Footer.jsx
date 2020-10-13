@@ -19,15 +19,15 @@ export default class Footer extends Component {
         <div className="divider">
           <div className="col-row col">
             <a href="#.">
-              <i class="fab fa-facebook"></i>
+              <i className="fab fa-facebook"></i>
               Facebook
             </a>
             <a href="#.">
-              <i class="fab fa-twitter"></i>
+              <i className="fab fa-twitter"></i>
               Twitter
             </a>
             <a href="#.">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
               Instagram
             </a>
           </div>

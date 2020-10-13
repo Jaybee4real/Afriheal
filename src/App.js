@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from './components/pages/LandingPage'
 import SignUp from './components/pages/SignUp'
-import SignIn from "./components/pages/SignUp";
+import SignIn from "./components/pages/SignIn";
 import "./index.scss";
 
 
