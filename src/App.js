@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LandingPage from './components/landing-page'
-import SignUp from './components/signup.jsx'
-import SignIn from "./components/signin.jsx";
+import LandingPage from './components/pages/LandingPage'
+import SignUp from './components/pages/SignUp'
+import SignIn from "./components/pages/SignUp";
 import "./index.scss";
 
 

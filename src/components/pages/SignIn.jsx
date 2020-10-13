@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../styles/signin.scss"
-import FormInput from '../components/form-input'
+import FormInput from '../FormInput'
 
 export default class SignIn extends Component {
     render() {
