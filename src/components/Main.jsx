@@ -111,11 +111,11 @@ export default class Main extends Component {
               <div className="buttons">
                 <div className="btn-white">
                   Go to course
-                  <i class="fas fa-arrow-right"></i>
+                  <i className="fas fa-arrow-right"></i>
                 </div>
                 <div className="btn-reverse">
                   Learn more
-                  <i class="fas fa-arrow-right"></i>
+                  <i className="fas fa-arrow-right"></i>
                 </div>
               </div>
             </div>

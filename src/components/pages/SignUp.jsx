@@ -115,7 +115,7 @@ export default class SignUp extends Component {
                       </div>
                     </form>
                     <div className="apply">
-                      <a href="#" className="apply-link">
+                      <a href="#." className="apply-link">
                         Apply as a health official
                       </a>
                     </div>
