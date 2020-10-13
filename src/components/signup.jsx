@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "../styles/signup.scss"
 import FormInput from '../components/form-input'
+import { Link } from 'react-router-dom';
 
 export default class SignUp extends Component {
     render() {
@@ -40,9 +41,13 @@ export default class SignUp extends Component {
                         <p className="or">Or</p>
                       </div>
                       <div className="signup-link-container">
-                        <a href="#" className="login-link">
-                          Sign in
-                        </a>
+                        <Link className='login-link' to='/signin'>
+                          Sign In
+                        </Link>
+                        {/*<a href="#" className="login-link">*/}
+                        {/*  Sign in*/}
+                        {/*</a>*/}
+
                       </div>
                     </div>
                   </div>
