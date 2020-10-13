@@ -1,24 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+    <Provider store={store}>
     <App />
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
-
-
-document.querySelector(".mobile-nav-toggle").addEventListener("click", () => {
-  document.querySelector(".mobile-nav-toggle").classList.toggle("active")
-  document.querySelector(".mobile-nav").classList.toggle("active")
-})
-
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
