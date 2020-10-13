@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import "../styles/signup.scss"
-import FormInput from '../components/form-input'
+import "../../styles/signup.scss"
+import FormInput from '../FormInput'
 import { Link } from 'react-router-dom';
 
 export default class SignUp extends Component {
