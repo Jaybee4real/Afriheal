@@ -13,13 +13,9 @@ export default class Signin extends Component {
               <i className="fal fa-times"></i>
             </Link>
           </div>
-          <div className="left-side">
+          <div className="left-side" style={{ backgroundColor: "#6b726f" }}>
             <div className="text">
-              <div className="heading">Join Our Health Community, Widen Your Reach</div>
-              <p>
-                Get access to our vast database of health information and our
-                very well experienced clientelle at the comfort of your home!
-              </p>
+            <div className="heading">Join Our Health Community, Widen Your Reach</div>
               <p className="or dissapear-760">Or</p>
               <br />
               <Link to="/signin" className="btn dissapear-760">
@@ -29,12 +25,14 @@ export default class Signin extends Component {
           </div>
           <div className="right-side">
             <div className="content-container">
-              <div className="heading">Sign Up</div>
+                <p>Health Offical</p>
+              <div className="heading">Application</div>
               <div className="input-container">
+                <input placeholder="Full Name"/>
                 <input placeholder="Email" />
                 <input placeholder="Secure Password" />
 
-                <div className="btn-reverse">SIGN UP</div>
+                <div className="btn-reverse">APPLY</div>
               </div>
               <div className="or">Or</div>
 
@@ -46,12 +44,6 @@ export default class Signin extends Component {
                 <div className="option">
                   <div className="icon"></div>
                   Sign Up With Facebook
-                </div>
-
-                <div className="text-option appear-760">
-                  <Link className="link" to="/signup/health-official">
-                    Apply As A Health Official
-                  </Link>
                 </div>
 
                 <div className="text-option appear-760">

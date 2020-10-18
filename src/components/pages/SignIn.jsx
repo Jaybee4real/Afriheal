@@ -10,7 +10,7 @@ export default class Signin extends Component {
           <div className="top-container">
             <div className="logo"></div>
             <Link to="/" className="close-btn">
-              <i class="fal fa-times"></i>
+              <i className="fal fa-times"></i>
             </Link>
           </div>
           <div className="left-side">
