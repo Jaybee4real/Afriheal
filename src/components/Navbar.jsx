@@ -56,24 +56,28 @@ export default function Navbar() {
       <div className="mobile-nav-toggle"></div>
       <div className="mobile-nav">
         <div className="logo"></div>
-        <a href="#." className="mobile-nav-item active">
+        <Link to="/" className="mobile-nav-item active">
           Home
-        </a>
-        <a href="#." className="mobile-nav-item">
-          Blog
-        </a>
-        <a href="#." className="mobile-nav-item">
-          Forums
-        </a>
-        <a href="#." className="mobile-nav-item">
-          Discusisons
-        </a>
-        <a href="/signup" className="mobile-nav-item">
+        </Link>
+        <Link to="/signin" className="mobile-nav-item">
+          Sign In
+        </Link>
+        <Link to="/signup" className="mobile-nav-item">
           Sign Up
-        </a>
-        <a href="#." className="mobile-nav-item">
+        </Link>
+        <Link to="/" className="mobile-nav-item">
+          Blog
+        </Link>
+        <Link to="/" className="mobile-nav-item">
+          Forums
+        </Link>
+        <Link to="/" className="mobile-nav-item">
+          Discusisons
+        </Link>
+
+        <Link to="/" className="mobile-nav-item">
           Contact Us
-        </a>
+        </Link>
       </div>
     </>
   );

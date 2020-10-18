@@ -46,6 +46,7 @@ $theme-color: #54bf9b;
   min-width: fit-content;
   transition: 0.4s ease-in-out;
   cursor: pointer;
+  max-width: fit-content;
 
   &:hover {
     background-color: $theme-color;
@@ -84,5 +85,19 @@ $theme-color: #54bf9b;
 
   &:hover {
     background-color: transparent;
+  }
+}
+
+.appear-760{
+  display: none;
+}
+
+@media(max-width: 760px){
+  .dissapear-760{
+    display: none !important;
+  }
+
+  .appear-760{
+    display: flex !important;
   }
 }

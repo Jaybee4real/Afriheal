@@ -1,112 +1,58 @@
-import React, { Component } from "react";
 import "../../styles/signin.scss";
-import FormInput from "../FormInput";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-export default class SignIn extends Component {
+export default class Signin extends Component {
   render() {
     return (
-      <div className="signin-container">
-        <div className="signin-wrapper">
-          <div className="signin-left-container">
-            <img
-              src="/assets/svg/Authentication white pattern.svg"
-              className="green-svg"
-              alt=""
-            />
-            <div className="signin-items-container">
-              <div className="signin-logo-container">
-                <div className="signin-logo-wrapper">
-                  <div className="signin-logo">
-                    <img
-                      src="/assets/svg/Afriheal logo white.svg"
-                      className="top-logo"
-                      alt="top-logo"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="left-content-container">
-                <div className="content-wrapper">
-                  <div className="heading-container">
-                    <h1 className="welcome">Welcome back,</h1>
-                  </div>
-                  <div className="text-container">
-                    <p className="welcome-text">
-                      Explore new articles from our expert doctors and get
-                      reliable information from our health database.
-                    </p>
-                  </div>
-                  <div>
-                    <p className="or">Or</p>
-                  </div>
-                  <div className="signin-link-container">
-                    <a href="#." className="login-link">
-                      Sign up
-                    </a>
-                  </div>
-                </div>
-              </div>
+      <div className="wrapper">
+        <div className="container">
+          <div className="top-container">
+            <div className="logo"></div>
+            <Link to="/" className="close-btn">
+              <i className="fal fa-times"></i>
+            </Link>
+          </div>
+          <div className="left-side">
+            <div className="text">
+              <div className="heading">Welcome Back!</div>
+              <p>
+                Explore new articles from our expert doctors and get reliable
+                information from our health database
+              </p>
+              <p className="or dissapear-760">Or</p>
+              <br />
+              <Link to="/signup" className="btn dissapear-760">
+                SIGN UP
+              </Link>
             </div>
           </div>
-          <div className="signin-right-container">
-            <div className="img-icon-container">
-              <img
-                src="/assets/svg/ic-close-48px.svg"
-                className="img-icon"
-                alt="img-icon"
-              />
-            </div>
-            <div className="form-wrapper">
-              <div className="heading-primary-container">
-                <h1 className="heading-primary">Sign In</h1>
+          <div className="right-side">
+            <div className="content-container">
+              <div className="heading">Sign In</div>
+              <div className="input-container">
+                <input placeholder="Email" />
+                <input placeholder="Secure Password" />
+
+                <div className="btn-reverse">SIGN IN</div>
               </div>
-              <div className="form-container">
-                <form>
-                  <FormInput
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                  <FormInput
-                    type="password"
-                    name="password"
-                    placeholder="Secure password"
-                    required
-                  />
-                  <div className="or-container">
-                    <p className="tiny-or">Or</p>
-                  </div>
-                  <div className="social-icon google-signin">
-                    <img
-                      src="/assets//svg/icons8-google.svg"
-                      className="google-icon"
-                      alt="google-icon"
-                    />
-                    <p className="social-signin-text google">
-                      Sign up with Google
-                    </p>
-                  </div>
-                  <div className="social-icon facebook-signin">
-                    <div className="fb-icon-container">
-                      <img
-                        src="/assets/svg/facebook-f.svg"
-                        className="facebook-icon"
-                        alt="facebook-icon"
-                      />
-                    </div>
-                    <p className="social-signin-text facebook">
-                      Sign up with Facebook
-                    </p>
-                  </div>
-                  <div className="signin-btn-container">
-                    <button className="signin-btn">Sign in</button>
-                  </div>
-                </form>
-                <div className="apply">
-                  <a href="#." className="apply-link">
-                    Apply as a health official
-                  </a>
+              <div className="or">Or</div>
+
+              <div className="options-container">
+                <div className="option">
+                  <div className="icon"></div>
+                  Sign In With Google
+                </div>
+                <div className="option">
+                  <div className="icon"></div>
+                  Sign In With Facebook
+                </div>
+
+                <div className="text-option appear-760">
+                  Dont Have An Account?
+                  <Link className="link" to="/signup">
+                    Create One
+                  </Link>
                 </div>
               </div>
             </div>
