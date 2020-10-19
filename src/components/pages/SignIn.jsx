@@ -1,9 +1,37 @@
 import "../../styles/signin.scss";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { Link, withRouter } from "react-router-dom";
+import { signInAccount } from "../../Redux/auth/auth.actions";
 
-export default class Signin extends Component {
+class SignIn extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleInputChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.signInAccount(this.state).then(
+      () => {
+        this.props.history.push("/");
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
+  }
   render() {
+     const { email, password } = this.state;
     return (
       <div className="wrapper">
         <div className="container">
@@ -30,12 +58,26 @@ export default class Signin extends Component {
           <div className="right-side">
             <div className="content-container">
               <div className="heading">Sign In</div>
-              <div className="input-container">
-                <input placeholder="Email" />
-                <input placeholder="Secure Password" />
+              <form className="input-container" onSubmit={this.handleSubmit}>
+                <input
+                  type="text"
+                  name="email"
+                  onChange={this.handleInputChange}
+                  value={email}
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  type="password"
+                  name="password"
+                  onChange={this.handleInputChange}
+                  value={password}
+                  placeholder="Secure Password"
+                  required
+                />
 
-                <div className="btn-reverse">SIGN IN</div>
-              </div>
+                <button className="btn-reverse">SIGN IN</button>
+              </form>
               <div className="or">Or</div>
 
               <div className="options-container">
@@ -62,3 +104,15 @@ export default class Signin extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.auth.errors,
+  loading: state.auth.loading,
+});
+const mapDispatchToProps = (dispatch) => ({
+  signInAccount: (newUser, history) =>
+    dispatch(signInAccount(newUser, history)),
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignIn))
