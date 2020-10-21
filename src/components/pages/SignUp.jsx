@@ -1,9 +1,49 @@
 import "../../styles/signin.scss";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { registerAccount } from "../../Redux/auth/auth.actions";
+import { Link, withRouter } from "react-router-dom";
+import { CountryDropdown  } from 'react-country-region-selector';
 
-export default class Signin extends Component {
+
+class SignUp extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      country: "",
+    };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleInputChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  selectCountry(val) {
+    this.setState({ country: val });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.registerAccount(this.state).then(
+      () => {
+        this.props.history.push("/signin");
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
+  }
+
   render() {
+    const { firstName, lastName, email, password, country } = this.state;
     return (
       <div className="wrapper">
         <div className="container">
@@ -15,7 +55,9 @@ export default class Signin extends Component {
           </div>
           <div className="left-side">
             <div className="text">
-              <div className="heading">Join Our Health Community, Widen Your Reach</div>
+              <div className="heading">
+                Join Our Health Community, Widen Your Reach
+              </div>
               <p>
                 Get access to our vast database of health information and our
                 very well experienced clientelle at the comfort of your home!
@@ -30,12 +72,47 @@ export default class Signin extends Component {
           <div className="right-side">
             <div className="content-container">
               <div className="heading">Sign Up</div>
-              <div className="input-container">
-                <input placeholder="Email" />
-                <input placeholder="Secure Password" />
+              <form className="input-container" onSubmit={this.handleSubmit}>
+                <input
+                  type="text"
+                  name="firstName"
+                  onChange={this.handleInputChange}
+                  value={firstName}
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  onChange={this.handleInputChange}
+                  value={lastName}
+                  placeholder="Lastt Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="email"
+                  onChange={this.handleInputChange}
+                  value={email}
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  type="password"
+                  name="password"
+                  onChange={this.handleInputChange}
+                  value={password}
+                  placeholder="Secure Password"
+                  required
+                />
+                <CountryDropdown
+                  value={country}
+                  className="country"
+                  onChange={(val) => this.selectCountry(val)}
+                />
 
-                <div className="btn-reverse">SIGN UP</div>
-              </div>
+                <button className="btn-reverse">SIGN UP</button>
+              </form>
               <div className="or">Or</div>
 
               <div className="options-container">
@@ -68,3 +145,15 @@ export default class Signin extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.auth.errors,
+  loading: state.auth.loading,
+});
+const mapDispatchToProps = (dispatch) => ({
+  registerAccount: (newUser, history) =>
+    dispatch(registerAccount(newUser, history)),
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp));
