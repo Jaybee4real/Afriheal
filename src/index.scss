@@ -89,7 +89,7 @@ $theme-color: #54bf9b;
 }
 
 .appear-760{
-  display: none;
+  display: none !important;
 }
 
 @media(max-width: 760px){

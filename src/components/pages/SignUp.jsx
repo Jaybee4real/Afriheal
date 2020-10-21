@@ -48,7 +48,7 @@ export default class Signin extends Component {
                   Sign Up With Facebook
                 </div>
 
-                <div className="text-option appear-760">
+                <div className="text-option">
                   <Link className="link" to="/signup/health-official">
                     Apply As A Health Official
                   </Link>

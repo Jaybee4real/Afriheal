@@ -210,6 +210,8 @@
         .text-option {
           font-size: 0.9rem;
           margin-top: .5rem;
+          justify-content: center;
+          display: flex;
 
           .link {
             color: $theme-color;

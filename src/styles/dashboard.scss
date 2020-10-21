@@ -1,0 +1,82 @@
+@import "../index.scss";
+
+.sidebar-container {
+  width: 13rem;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  border-right: 2px solid #d3d3d39f;
+
+  .logo {
+    height: 5rem;
+    width: 4rem;
+  }
+
+  .sidebar-items-container {
+    height: 100%;
+    width: 90%;
+    padding-top: 6rem;
+  }
+  .sidebar-item {
+    display: flex;
+    flex-direction: row;
+    color: #808080e5;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    margin: 0.7rem;
+    align-items: center;
+    cursor: pointer;
+
+    i {
+      font-size: 1.3rem;
+      margin: 0;
+      padding: 0;
+      margin-right: 0.8rem;
+      position: relative;
+      top: -0.05rem;
+    }
+
+    &.active {
+      color: $theme-color;
+      background-color: #d3d3d39f;
+
+      &:hover {
+        background-color: #d3d3d39f;
+      }
+    }
+
+    &:hover {
+      background-color: #d3d3d33b;
+    }
+  }
+
+  .other-items-container {
+    min-height: 10rem;
+    width: 90%;
+
+    hr {
+      margin-left: 1.5rem;
+      background-color: lightgrey;
+    }
+
+    .user-tab {
+      padding: 0.5rem;
+      i {
+        margin-right: 0.3rem;
+        font-size: 2rem;
+        top: 0.15rem;
+      }
+      .name {
+        font-size: 0.8rem;
+      }
+      .email {
+        font-size: 0.8rem;
+        color: #808080e5;
+      }
+    }
+  }
+}
