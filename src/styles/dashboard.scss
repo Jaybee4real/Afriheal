@@ -66,16 +66,156 @@
     .user-tab {
       padding: 0.5rem;
       i {
-        margin-right: 0.3rem;
+        margin-right: 0.45rem;
         font-size: 2rem;
         top: 0.15rem;
       }
       .name {
         font-size: 0.8rem;
+        color: #646464;
       }
       .email {
         font-size: 0.8rem;
         color: #808080e5;
+      }
+    }
+  }
+}
+////////////////////////////Sidebar Styles End//////////
+
+main {
+  min-height: 100vh;
+  width: calc(100% - 14rem);
+  margin-left: 13.1rem;
+
+  .dashboard-nav {
+    width: calc(100% - 15rem);
+    padding: 1rem 3rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+
+    .search-container {
+      width: 70%;
+
+      .input-container {
+        display: flex;
+        align-items: center;
+        background-color: #d3d3d33b;
+        border-radius: 15px;
+
+        i {
+          font-size: 1.2rem;
+          position: relative;
+          padding: 0.2rem 1rem;
+          color: $theme-color;
+          border-right: 1px solid grey;
+        }
+
+        input {
+          width: 90%;
+          border: none;
+          padding: 0.9rem 1rem;
+          padding-bottom: 0.7rem;
+          outline: none;
+          background-color: transparent;
+          font-size: 1rem;
+          color: $theme-color;
+          font-weight: 200 !important;
+
+          ::placeholder {
+            color: #d3d3d341 !important;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 2rem;
+
+      .notifications {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.4rem;
+        color: $theme-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #d3d3d33b;
+        margin-right: 2rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &.active, &:hover {
+          background-color: $theme-color;
+          color: white;
+        }
+      }
+
+      .logout {
+        color: red;
+        font-size: 1.05rem;
+        cursor: pointer;
+        min-width: fit-content;
+
+        i {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+/////////////////////?Dashboard Home Styles///////////////////
+
+.home-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 8rem;
+
+
+  &.notification-bar-active {
+  width: calc(100% - 17rem);
+
+  }
+
+  .welcome {
+    width: 90%;
+    min-height: 17rem;
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: #fec582;
+
+    .left-side{
+      max-width: 60%;
+      color: white;
+      .heading{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .button-container{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        
+        .btn{
+          margin-left: 1rem;
+          border-color: white !important;
+
+          &:hover{
+            background-color: white !important;
+            color: $theme-color !important;
+          }
+        }
       }
     }
   }

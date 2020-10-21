@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class DashboardSidebar extends Component {
   render() {
@@ -6,40 +7,40 @@ export default class DashboardSidebar extends Component {
       <div className="sidebar-container">
         <div className="logo"></div>
         <div className="sidebar-items-container">
-          <div className="sidebar-item active">
+          <Link className="sidebar-item active">
             <i className="fal fa-home-heart"></i>
             Home
-          </div>
-          <div className="sidebar-item">
+          </Link>
+          <Link className="sidebar-item ">
             <i className="far fa-calendar-day"></i>
             Appointments
-          </div>
-          <div className="sidebar-item">
+          </Link>
+          <Link className="sidebar-item ">
             <i class="far fa-globe-africa"></i>
             Community
-          </div>
-          <div className="sidebar-item">
+          </Link>
+          <Link className="sidebar-item ">
             <i class="fad fa-comments-alt"></i>
             Messages
-          </div>
-          <div className="sidebar-item">
+          </Link>
+          <Link className="sidebar-item ">
             <i class="fad fa-user"></i>
             Profile
-          </div>
+          </Link>
         </div>
         <div className="other-items-container">
-          <div className="sidebar-item">
+          <Link className="sidebar-item ">
             <i class="fal fa-question-circle"></i>
             Help
-          </div>
+          </Link>
           <hr />
-          <div className="sidebar-item user-tab">
+          <Link className="sidebar-item user-tab">
             <i class="fad fa-user-circle"></i>
-            <div className="subcontainer">
+            <Link className="subcontainer">
               <div className="name">John Doe</div>
               <div className="email">Johndoe@email.com</div>
-            </div>
-          </div>
+            </Link>
+          </Link>
         </div>
       </div>
     );

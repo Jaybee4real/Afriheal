@@ -15,8 +15,13 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/user" component={Dashboard} />
+        {/* <Route exact path="/user/home" component={} />
+        <Route exact path="/user/appointments" component={} />
+        <Route exact path="/user/community" component={} />
+        <Route exact path="/user/messages" component={} />
+        <Route exact path="/user/profile" component={} /> */}
         <Route exact path="/signup/health-official" component={HealthOfficialSignIn} />
-        <Route exact path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
   );
