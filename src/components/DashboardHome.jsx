@@ -19,6 +19,8 @@ export default class DashboardHome extends Component {
               <div className="btn">Learn More</div>
             </div>
           </div>
+          <div className="right-side">
+          </div>
         </div>
       </div>
     );

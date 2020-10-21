@@ -3,7 +3,7 @@
 .sidebar-container {
   width: 13rem;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,7 +138,7 @@ main {
       align-items: center;
       margin-left: 2rem;
 
-      .notifications {
+      .notifications-icon {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 1.4rem;
@@ -175,7 +175,7 @@ main {
 /////////////////////?Dashboard Home Styles///////////////////
 
 .home-wrapper {
-  min-height: 100vh;
+  min-height: 200vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -189,10 +189,12 @@ main {
 
   .welcome {
     width: 90%;
-    min-height: 17rem;
+    height: 17rem;
     border-radius: 20px;
     padding: 2rem;
     background-color: #fec582;
+    display: flex;
+    flex-direction: row;
 
     .left-side{
       max-width: 60%;
@@ -218,5 +220,31 @@ main {
         }
       }
     }
+
+    .right-side{
+      background-image: url(../img/girl.png);
+      height: 100%;
+      width: 40%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
+}
+
+
+////////Notifications/////////
+.notifications-container{
+  width: 18rem;
+  position: fixed;
+  right: 0rem;
+  top: 0rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid #d3d3d39f;
+  padding: .7rem;
+  padding-top: 7rem;
+
 }

@@ -11,7 +11,7 @@ export default class DashboardNav extends Component {
           </div>
         </div>
         <div className="right-side">
-          <div className="notifications">
+          <div className="notifications-icon">
             <i className="fal fa-bell"></i>
           </div>
           <div className="logout">
