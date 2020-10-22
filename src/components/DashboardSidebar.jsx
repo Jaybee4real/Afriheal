@@ -30,7 +30,12 @@ export default class DashboardSidebar extends Component {
         </div>
         <div className="other-items-container">
           <Link className="sidebar-item ">
-            <i class="fal fa-question-circle"></i>
+            <i
+              class="fal fa-question-circle"
+              style={{
+                top: ".1rem",
+              }}
+            ></i>
             Help
           </Link>
           <hr />

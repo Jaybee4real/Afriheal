@@ -1,7 +1,7 @@
 @import "../index.scss";
 
 .sidebar-container {
-  width: 13rem;
+  width: 12rem;
   height: 100vh;
   position: fixed;
   display: flex;
@@ -17,14 +17,14 @@
 
   .sidebar-items-container {
     height: 100%;
-    width: 90%;
-    padding-top: 6rem;
+    width: 95%;
+    padding-top: 8rem;
   }
   .sidebar-item {
     display: flex;
     flex-direction: row;
     color: #808080e5;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 1rem;
     border-radius: 15px;
     margin: 0.7rem;
@@ -32,7 +32,7 @@
     cursor: pointer;
 
     i {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin: 0;
       padding: 0;
       margin-right: 0.8rem;
@@ -56,7 +56,7 @@
 
   .other-items-container {
     min-height: 10rem;
-    width: 90%;
+    width: 95%;
 
     hr {
       margin-left: 1.5rem;
@@ -65,6 +65,7 @@
 
     .user-tab {
       padding: 0.5rem;
+      width: 95%;
       i {
         margin-right: 0.45rem;
         font-size: 2rem;
@@ -85,17 +86,19 @@
 
 main {
   min-height: 100vh;
-  width: calc(100% - 14rem);
-  margin-left: 13.1rem;
+  width: calc(100% - 13rem);
+  margin-left: 12rem;
 
   .dashboard-nav {
-    width: calc(100% - 15rem);
+    width: calc(100% - 13rem);
     padding: 1rem 3rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: fixed;
+    background-color: white;
+    z-index: 2;
 
     .search-container {
       width: 70%;
@@ -139,9 +142,9 @@ main {
       margin-left: 2rem;
 
       .notifications-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.4rem;
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1.2rem;
         color: $theme-color;
         display: flex;
         justify-content: center;
@@ -150,9 +153,10 @@ main {
         background-color: #d3d3d33b;
         margin-right: 2rem;
         cursor: pointer;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
-        &.active, &:hover {
+        &.active,
+        &:hover {
           background-color: $theme-color;
           color: white;
         }
@@ -160,7 +164,7 @@ main {
 
       .logout {
         color: red;
-        font-size: 1.05rem;
+        font-size: 0.93rem;
         cursor: pointer;
         min-width: fit-content;
 
@@ -179,41 +183,46 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 8rem;
-
+  padding-top: 6rem;
 
   &.notification-bar-active {
-  width: calc(100% - 17rem);
-
+    width: calc(100% - 19rem);
   }
 
   .welcome {
-    width: 90%;
-    height: 17rem;
-    border-radius: 20px;
-    padding: 2rem;
+    width: 96%;
+    min-height: 16rem;
+    border-radius: 32px;
+    padding: 3rem;
     background-color: #fec582;
     display: flex;
     flex-direction: row;
+    justify-self: center;
+    box-shadow: 0px 3px 10px 7px #d3d3d354;
+    justify-content: space-between;
 
-    .left-side{
+    .left-side {
       max-width: 60%;
       color: white;
-      .heading{
+      font-size: 0.85rem;
+      .heading {
         font-size: 1.3rem;
         margin-bottom: 1rem;
       }
+      .text {
+        margin-bottom: 1rem;
+      }
 
-      .button-container{
+      .button-container {
         display: flex;
         flex-direction: row;
         margin-top: 1rem;
-        
-        .btn{
+
+        .btn {
           margin-left: 1rem;
           border-color: white !important;
 
-          &:hover{
+          &:hover {
             background-color: white !important;
             color: $theme-color !important;
           }
@@ -221,30 +230,187 @@ main {
       }
     }
 
-    .right-side{
+    .right-side {
       background-image: url(../img/girl.png);
-      height: 100%;
+      min-height: 11rem;
       width: 40%;
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+
+      i {
+        position: absolute;
+        right: 0;
+        top: -1rem;
+        color: white;
+      }
     }
   }
 }
 
-
 ////////Notifications/////////
-.notifications-container{
-  width: 18rem;
+.notifications-container {
+  width: 19.5rem;
   position: fixed;
   right: 0rem;
   top: 0rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border-left: 2px solid #d3d3d39f;
-  padding: .7rem;
-  padding-top: 7rem;
+  padding: 0.7rem 1.5rem;
+  padding-top: 8rem;
+  overflow-y: scroll;
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 90%;
+    background-color: #d3d3d39f;
+    left: 0;
+  }
+
+  .title {
+    color: $theme-color;
+    font-size: 1.4rem;
+    text-align: start;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    .option {
+      font-size: 0.8rem;
+      align-self: center;
+      margin-right: 0.7rem;
+      color: #333333;
+    }
+  }
+
+  .notification-section {
+    margin-bottom: 3rem;
+
+    .notification-item {
+      padding: 1.2rem 10%;
+      background-color: #d3d3d33b;
+      font-size: 0.9rem;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+
+      .notification-title {
+        display: flex;
+        justify-content: space-between;
+        color: $theme-color;
+      }
+
+      &.important .notification-title {
+        color: red;
+      }
+
+      i {
+        color: grey !important;
+      }
+
+      hr {
+        height: 1px;
+        margin: 1rem 0;
+        background-color: #ccc;
+        border: none;
+      }
+
+      .notification-body {
+        p {
+          font-size: 0.8rem;
+          color: #333333;
+        }
+      }
+
+      .detail {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 0;
+        .image i {
+          font-size: 2rem;
+          margin-right: 0.5rem;
+          top: 0.1rem;
+        }
+
+        .text {
+          .name {
+            color: #111111;
+          }
+
+          .org {
+            color: #888888;
+          }
+        }
+      }
+
+      .download {
+        color: $theme-color;
+        font-size: 0.9rem;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.message-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2.5rem;
+
+  &:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    background-color: #ccc;
+    display: flex;
+    left: 15%;
+    bottom: -.78rem;
+  }
+
+  .image i {
+    font-size: 2rem;
+    margin-right: 0.7rem;
+  }
+
+  .text {
+    font-size: 0.85rem;
+    flex: 1;
+    .sender-name {
+      color: #111111;
+    }
+    .preview {
+      font-size: 0.8rem;
+      color: #888888;
+    }
+  }
+
+  .right-side {
+    position: relative;
+    right: 0;
+    .time {
+      font-size: 0.6rem;
+    }
+    .message-count{
+      background-color: $theme-color;
+      text-align: end;
+      max-width: fit-content;
+      position: absolute;
+      font-size: 0.8rem;
+      padding: 1px 2px;
+      border-radius: 3px;
+      right: 0;
+      margin-top: 2px;
+    }
+  }
 }

@@ -20,9 +20,11 @@ export default class DashboardHome extends Component {
             </div>
           </div>
           <div className="right-side">
+            <i className="fal fa-times"></i>
           </div>
         </div>
       </div>
     );
   }
 }
+ 
