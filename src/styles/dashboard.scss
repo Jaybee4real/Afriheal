@@ -1,5 +1,9 @@
 @import "../index.scss";
 
+.hidden {
+  display: none;
+}
+
 .sidebar-container {
   width: 12rem;
   height: 100vh;
@@ -53,7 +57,6 @@
       background-color: #d3d3d33b;
     }
   }
-
   .other-items-container {
     min-height: 10rem;
     width: 95%;
@@ -86,11 +89,14 @@
 
 main {
   min-height: 100vh;
-  width: calc(100% - 13rem);
+  width: calc(100% - 32rem);
+  max-width: 1300px;
   margin-left: 12rem;
+
 
   .dashboard-nav {
     width: calc(100% - 13rem);
+    max-width: 1300px;
     padding: 1rem 3rem;
     padding-top: 1.5rem;
     display: flex;
@@ -178,16 +184,13 @@ main {
 
 /////////////////////?Dashboard Home Styles///////////////////
 
+
 .home-wrapper {
   min-height: 200vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 6rem;
-
-  &.notification-bar-active {
-    width: calc(100% - 19rem);
-  }
 
   .welcome {
     width: 96%;
@@ -206,11 +209,11 @@ main {
       color: white;
       font-size: 0.85rem;
       .heading {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
       }
       .text {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .button-container {
@@ -218,6 +221,10 @@ main {
         flex-direction: row;
         margin-top: 1rem;
 
+        .btn,
+        .btn-white {
+          padding: 0.4rem 1.5rem;
+        }
         .btn {
           margin-left: 1rem;
           border-color: white !important;
@@ -299,6 +306,11 @@ main {
       display: flex;
       flex-direction: column;
       margin: 1rem 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #d3d3d39f;
+      }
 
       .notification-title {
         display: flex;
@@ -312,6 +324,7 @@ main {
 
       i {
         color: grey !important;
+        cursor: pointer;
       }
 
       hr {
@@ -359,28 +372,52 @@ main {
   }
 }
 
+@media(max-width: 1080px){
+  .notifications-container{
+    transform: translateX(-100vw);
+  }
+
+  main{
+    width: calc(100% - 13rem) !important;
+  }
+}
+
+@media(min-width: 1440px){
+  .notifications-container{
+    justify-self: center;
+  }
+}
+
 .message-container {
   width: 100%;
   display: flex;
   flex-direction: row !important;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  padding: 1rem 0.3rem;
+  border-radius: 20px;
 
-  &:after{
-    content: '';
+  &:hover {
+    background-color: #d3d3d39f;
+  }
+
+  &:after {
+    content: "";
     position: absolute;
     height: 1px;
     width: 80%;
     background-color: #ccc;
     display: flex;
     left: 15%;
-    bottom: -.78rem;
+    bottom: 0rem;
   }
 
   .image i {
     font-size: 2rem;
     margin-right: 0.7rem;
+    color: grey;
   }
 
   .text {
@@ -399,18 +436,41 @@ main {
     position: relative;
     right: 0;
     .time {
-      font-size: 0.6rem;
+      font-size: 0.65rem;
+      color: $theme-color;
     }
-    .message-count{
+    .message-count {
       background-color: $theme-color;
       text-align: end;
       max-width: fit-content;
       position: absolute;
-      font-size: 0.8rem;
-      padding: 1px 2px;
+      font-size: 0.75rem;
+      padding: 1px 2.5px;
       border-radius: 3px;
       right: 0;
-      margin-top: 2px;
+      margin-top: 3px;
+      color: white;
     }
+  }
+}
+
+/////////////////////////Content//////////////////
+
+.content {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  &:before{
+    content: '';
+    position: absolute;
+    background-color:  #d3d3d33b;
+    left: 0;
+    width: 80%;
+    left: 10%;
+    justify-self: center;
+    height: 2px;
   }
 }

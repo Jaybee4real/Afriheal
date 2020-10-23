@@ -23,6 +23,10 @@ export default class DashboardHome extends Component {
             <i className="fal fa-times"></i>
           </div>
         </div>
+
+        <div className="content">
+          
+        </div>
       </div>
     );
   }

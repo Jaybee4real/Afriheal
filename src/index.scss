@@ -17,6 +17,7 @@
   src: url("../src/fonts/HK-Grotesk/HKGrotesk-SemiBoldLegacy.otf");
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +30,9 @@
 body {
   width: 100vw;
   overflow-x: hidden;
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
 }
 
 a{

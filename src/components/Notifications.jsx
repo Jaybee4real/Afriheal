@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import MessagePreview from "./MessagePreview";
 
 export default class Notifications extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="notifications-container">
