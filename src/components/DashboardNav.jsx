@@ -16,7 +16,7 @@ export default class DashboardNav extends Component {
           </div>
           <div className="logout">
             <i className="far fa-sign-out"></i>
-            Logout
+            <span className="text">Logout</span>
           </div>
         </div>
       </div>

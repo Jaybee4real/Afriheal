@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PostItemLarge from "./PostItemLarge";
+import PostItemSmall from "./PostItemSmall";
 
 export default class DashboardHome extends Component {
   render() {
@@ -23,12 +25,15 @@ export default class DashboardHome extends Component {
             <i className="fal fa-times"></i>
           </div>
         </div>
-
         <div className="content">
-          
+          <div className="row">
+            <PostItemLarge />
+            <div className="inner">
+              <PostItemSmall />
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 }
- 

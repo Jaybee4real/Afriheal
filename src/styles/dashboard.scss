@@ -4,6 +4,11 @@
   display: none;
 }
 
+.untranslated{
+  transform: translateX(0) !important;
+
+}
+
 .sidebar-container {
   width: 12rem;
   height: 100vh;
@@ -371,10 +376,12 @@ main {
     }
   }
 }
+//////////Todo-Mobile Nav////////
 
 @media(max-width: 1080px){
   .notifications-container{
-    transform: translateX(-100vw);
+    transform: translateX(100vw);
+    transition:  .5s ease-in-out;
   }
 
   main{
@@ -387,6 +394,31 @@ main {
     justify-self: center;
   }
 }
+
+@media(max-width:680px){
+  .sidebar-container{
+    transform: translateX(-100vw);
+    transition:  .5s ease-in-out;
+  }
+
+  main{
+    width: 100vw !important;
+    margin-left: 0rem;
+  }
+
+  .dashboard-nav{
+    width: 100vw !important;
+    .right-side .text{
+      display: none;
+    }
+
+    .mobile-nav{
+      display: flex !important;
+    }
+  }
+}
+
+//////////////////////////////////////////
 
 .message-container {
   width: 100%;
@@ -474,3 +506,4 @@ main {
     height: 2px;
   }
 }
+/////////////////////////////
