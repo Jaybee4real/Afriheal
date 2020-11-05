@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import VerifyReducer from './verify.reducer';
-import LoginReducer from './loginReducer';
-import { signupReducer } from './signup.reducer';
+// import LoginReducer from './loginReducer';
+// import { signupReducer } from './signup.reducer';
 import FacebookReducer from './facebookReducer';
 import authReducer from "../auth/auth.reducer";
 // import DashbordReducer from './/dashboard.reducer';
