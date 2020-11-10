@@ -18,7 +18,7 @@ export default class PostItemSmall extends Component {
           <div className="article-text-preview">
             {this.props.articleText
               ? this.props.articleText
-              : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis consequuntu"}
+              : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis"}
           </div>
         </div>
       </div>

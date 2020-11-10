@@ -17,7 +17,6 @@
   src: url("../src/fonts/HK-Grotesk/HKGrotesk-SemiBoldLegacy.otf");
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -35,13 +34,13 @@ body {
   margin: auto;
 }
 
-a{
+a {
   text-decoration: none;
   text-emphasis: none;
   color: inherit;
 }
 
-i{
+i {
   cursor: pointer;
 }
 
@@ -87,7 +86,7 @@ $theme-color: #54bf9b;
   border-radius: 5px;
   max-width: fit-content;
   padding: 0.4rem;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
   justify-content: center;
 
@@ -96,16 +95,16 @@ $theme-color: #54bf9b;
   }
 }
 
-.appear-760{
+.appear-760 {
   display: none !important;
 }
 
-@media(max-width: 760px){
-  .dissapear-760{
+@media (max-width: 760px) {
+  .dissapear-760 {
     display: none !important;
   }
 
-  .appear-760{
+  .appear-760 {
     display: flex !important;
   }
 }
