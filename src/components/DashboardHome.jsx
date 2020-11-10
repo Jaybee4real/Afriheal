@@ -27,9 +27,44 @@ export default class DashboardHome extends Component {
         </div>
         <div className="content">
           <div className="row">
-            <PostItemLarge />
+            <PostItemLarge featureImage={require("../img/vaccine.jpeg")} />
             <div className="inner">
-              <PostItemSmall />
+              <PostItemSmall
+                featureImage={require("../img/eye.png")}
+                title={"Mental Health : Cancer 2.0"}
+              />
+              <PostItemSmall
+                featureImage={require("../img/malaria.jpg")}
+                title={"The Fight Against Malaria"}
+              />
+            </div>
+          </div>
+          {/* /////////////////////////////?? */}
+          <div className="row">
+            <PostItemLarge featureImage={require("../img/vaccine.png")} />
+            <div className="inner">
+              <PostItemSmall
+                featureImage={require("../img/eye.png")}
+                title={"Mental Health : Cancer 2.0"}
+              />
+              <PostItemSmall
+                featureImage={require("../img/malaria.jpg")}
+                title={"The Fight Against Malaria"}
+              />
+            </div>
+          </div>
+          {/* /////////////////////////////?? */}
+          <div className="row">
+            <PostItemLarge featureImage={require("../img/article_header.jpeg")} />
+            <div className="inner">
+              <PostItemSmall
+                featureImage={require("../img/eye.png")}
+                title={"Mental Health : Cancer 2.0"}
+              />
+              <PostItemSmall
+                featureImage={require("../img/malaria.jpg")}
+                title={"The Fight Against Malaria"}
+              />
             </div>
           </div>
         </div>
