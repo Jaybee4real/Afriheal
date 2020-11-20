@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
 export default class DashboardNav extends Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+  }
   render() {
     return (
       <div className="dashboard-nav">
+        <i id="mobile-nav-toggle" className="fal fa-bars"></i>
         <div className="search-container">
           <div className="input-container">
             <i class="fal fa-search"></i>
@@ -11,7 +16,10 @@ export default class DashboardNav extends Component {
           </div>
         </div>
         <div className="right-side">
-          <div className="notifications-icon">
+          <div
+            onClick={() => this.props.toggleNotification()}
+            className="notifications-icon"
+          >
             <i className="fal fa-bell"></i>
           </div>
           <div className="logout">

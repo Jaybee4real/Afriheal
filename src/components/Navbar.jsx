@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <div className="mobile-nav-toggle"></div>
+      <div className="mobile-nav-toggle invert-on-click"></div>
       <div className="mobile-nav">
         <div className="logo"></div>
         <Link to="/" className="mobile-nav-item active">

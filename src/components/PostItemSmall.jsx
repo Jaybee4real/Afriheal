@@ -11,7 +11,7 @@ export default class PostItemSmall extends Component {
         <img src={this.props.featureImage} alt="" />
         <div className="article-body">
           <div className="details">
-            <div className="post-topic purple">Coronavirus</div>
+            <div className="post-topic purple">{this.props.topic}</div>
             <div className="info">5 min read · Jun 2020</div>
           </div>
           <div className="title">{this.props.title}</div>

@@ -26,12 +26,11 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100vw;
+body, html{
   overflow-x: hidden;
-  position: relative;
   max-width: 1440px;
   margin: auto;
+  position: relative !important;
 }
 
 a {
@@ -108,3 +107,6 @@ $theme-color: #54bf9b;
     display: flex !important;
   }
 }
+
+////////////////////////Mobile Navbat Toggle////////
+

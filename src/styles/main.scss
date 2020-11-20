@@ -1,7 +1,7 @@
 @import "../index.scss";
 
 .section {
-  min-height: 100vh;
+  min-height: 800px;
   max-height: 890px;
   padding: 2rem 10vw;
 
@@ -26,6 +26,8 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      
 
       &:nth-of-type(1) .image {
         background-image: url(../img/row1.svg);
@@ -46,6 +48,10 @@
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+      }
+
+      .text{
+        height: 400px;
       }
 
       .heading {
@@ -233,7 +239,7 @@
     flex-direction: row;
     padding: 6%;
 
-    .right-side{
+    .right-side {
       height: 300px;
       position: relative;
       width: 35%;
@@ -261,15 +267,15 @@
         flex-direction: row;
         margin-top: 2rem;
 
-        .fas{
-          margin: 0 .5rem;
+        .fas {
+          margin: 0 0.5rem;
         }
 
-        .btn-white{
+        .btn-white {
           margin-right: 1rem;
         }
 
-        .btn-reverse{
+        .btn-reverse {
           display: flex;
           align-items: center;
         }
@@ -278,24 +284,24 @@
   }
 }
 
-
-@media(max-width: 720px){
-  .course-section .content-wrapper{
+@media (max-width: 720px) {
+  .course-section .content-wrapper {
     flex-direction: column-reverse;
 
-    .left-side, .right-side{
+    .left-side,
+    .right-side {
       width: 100%;
       margin-bottom: 1rem;
     }
   }
 }
 
-
-@media(max-width:340px){
-   .content-wrapper .left-side .buttons{
+@media (max-width: 340px) {
+  .content-wrapper .left-side .buttons {
     flex-direction: column !important;
-    .btn-white,.btn-reverse{
-      margin: .3rem;
+    .btn-white,
+    .btn-reverse {
+      margin: 0.3rem;
       max-width: fit-content;
     }
   }

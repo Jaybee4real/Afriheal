@@ -4,8 +4,8 @@
   display: none;
 }
 
-body {
-  overflow-x: hidden;
+.dashboard-container {
+  display: flex;
 }
 
 .untranslated {
@@ -95,23 +95,42 @@ body {
 }
 ////////////////////////////Sidebar Styles End//////////
 
+.notification-bar-active {
+  main {
+    width: calc(100vw - 32rem) !important;
+    max-width: 970px;
+  }
+  .notifications-container {
+    display: flex !important;
+  }
+}
+
 main {
   min-height: 100vh;
-  width: calc(100% - 32rem);
-  max-width: 1300px;
   margin-left: 12rem;
+  width: calc(100vw - 15rem);
 
   .dashboard-nav {
     width: calc(100% - 13rem);
-    max-width: 1300px;
+    max-width: 1249px;
     padding: 1rem 3rem;
     padding-top: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: fixed;
     background-color: white;
+    position: fixed;
+    align-items: center;
     z-index: 2;
+
+    .fa-bars {
+      font-size: 2rem;
+      position: relative;
+      color: $theme-color;
+      top: 2px;
+      left: -15px;
+      display: none;
+    }
 
     .search-container {
       width: 70%;
@@ -153,6 +172,7 @@ main {
       flex-direction: row;
       align-items: center;
       margin-left: 2rem;
+      right: 0;
 
       .notifications-icon {
         width: 2.3rem;
@@ -196,7 +216,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 6rem;
 
   .welcome {
     width: 96%;
@@ -263,18 +282,34 @@ main {
   }
 }
 
-////////Notifications/////////
+////////Notifications-Sidebar Styles/////////
 .notifications-container {
-  width: 19.5rem;
   position: fixed;
-  right: 0rem;
-  top: 0rem;
   height: 100vh;
-  display: flex;
+  min-width: 19rem;
+  display: none;
   flex-direction: column;
   padding: 0.7rem 1.5rem;
   padding-top: 8rem;
   overflow-y: scroll;
+
+  .fa-times {
+    position: fixed !important;
+    right: 4rem;
+    transform: translateY(-1.5rem);
+    font-size: 1.4rem;
+    background-color: white;
+    padding-bottom: 0.2rem !important;
+    padding: 0.5rem;
+    border-radius: 55%;
+    color: $theme-color;
+  }
+
+  &::-webkit-scrollbar {
+    appearance: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
 
   &::before {
     content: "";
@@ -385,14 +420,33 @@ main {
     transition: 0.5s ease-in-out;
   }
 
-  main {
-    width: calc(100% - 13rem) !important;
-  }
-}
+  .notification-bar-active .notifications-container {
+    transform: translateX(-19rem) !important;
+    width: 20rem;
+    z-index: 4;
+    padding-top: 3.5rem;
+    padding-right: 0rem !important;
 
-@media (min-width: 1440px) {
-  .notifications-container {
-    justify-self: center;
+    .fa-times {
+      right: 2rem;
+    }
+  }
+
+  .notification-bar-active main {
+    overflow: hidden;
+  }
+
+  .dashboard-container .content {
+    padding: 0.5rem 1rem;
+  }
+
+  .notification-bar-active main {
+    width: calc(100vw - 13rem) !important;
+  }
+
+  .notifications-container,
+  .sidebar-container {
+    background-color: white;
   }
 }
 
@@ -400,8 +454,14 @@ main {
   .sidebar-container {
     transform: translateX(-100vw);
     transition: 0.5s ease-in-out;
+    z-index: 3;
+
+    &.active {
+      transform: translateX(0) !important;
+    }
   }
 
+  .notification-bar-active main,
   main {
     width: 100vw !important;
     margin-left: 0rem;
@@ -413,8 +473,32 @@ main {
       display: none;
     }
 
-    .mobile-nav {
+    .fa-bars {
       display: flex !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: 0rem !important;
+  }
+
+  .dashboard-nav {
+    padding: 0.7rem !important;
+    padding-top: 1.5rem !important;
+
+    .fa-bars {
+      left: 0 !important;
+      margin-right: 0.9rem;
+    }
+
+    .right-side {
+      margin-left: 1rem !important;
+
+      .notifications-icon {
+        margin-right: 1rem !important;
+      }
     }
   }
 }
@@ -492,11 +576,13 @@ main {
 .content {
   min-height: 80vh;
   width: 100%;
-  padding: 0 2vw;
+  padding: 0 2rem;
   position: relative;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  max-width: 970px;
+
   &:before {
     content: "";
     position: absolute;
@@ -629,7 +715,7 @@ main {
       width: 8rem;
       object-fit: cover;
       border-radius: 20px;
-      margin-top: 0.5rem;
+      // margin-top: 0.5rem;
     }
 
     .article-body {
@@ -645,10 +731,21 @@ main {
   }
 }
 
-@media (max-width: 1417px) {
-  .row {
+@media (max-width: 1430px) {
+  .notification-bar-active .row {
     flex-direction: column;
     padding: 0 2rem;
+    .post-item-large-container,
+    .post-item-small-container {
+      max-width: 100% !important;
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .row {
+    flex-direction: column;
     .post-item-large-container,
     .post-item-small-container {
       max-width: 100% !important;

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import PostItemLarge from "./PostItemLarge";
-import PostItemSmall from "./PostItemSmall";
+import PostItemLarge from "../PostItemLarge";
+import PostItemSmall from "../PostItemSmall";
 
 export default class DashboardHome extends Component {
   render() {
     return (
-      <div className="home-wrapper notification-bar-active">
+      <div className="home-wrapper">
         <div className="welcome">
           <div className="left-side">
             <div className="heading">Welcome Ava,</div>
@@ -27,45 +27,51 @@ export default class DashboardHome extends Component {
         </div>
         <div className="content">
           <div className="row">
-            <PostItemLarge featureImage={require("../img/vaccine.jpeg")} />
+            <PostItemLarge featureImage={require("../../img/vaccine.jpeg")} />
             <div className="inner">
               <PostItemSmall
-                featureImage={require("../img/eye.png")}
+                featureImage={require("../../img/eye.png")}
                 title={"Mental Health : Cancer 2.0"}
+                topic={"Mental Health"}
               />
               <PostItemSmall
-                featureImage={require("../img/malaria.jpg")}
+                featureImage={require("../../img/malaria.jpg")}
                 title={"The Fight Against Malaria"}
+                topic={"Health"}
               />
             </div>
           </div>
           {/* /////////////////////////////?? */}
           <div className="row">
-            <PostItemLarge featureImage={require("../img/vaccine.png")} />
+            <PostItemLarge featureImage={require("../../img/vaccine.png")} />
             <div className="inner">
               <PostItemSmall
-                featureImage={require("../img/doctor.jpg")}
+                featureImage={require("../../img/doctor.jpg")}
                 title={"Mental Health : Cancer 2.0"}
+                topic={"Mental Health"}
               />
               <PostItemSmall
-                featureImage={require("../img/eye.png")}
+                featureImage={require("../../img/eye.png")}
                 title={"The Fight Against Malaria"}
+                topic={"Health"}
               />
             </div>
           </div>
           {/* /////////////////////////////?? */}
           <div className="row">
             <PostItemLarge
-              featureImage={require("../img/article_header.jpeg")}
+              featureImage={require("../../img/article_header.jpeg")}
             />
             <div className="inner">
               <PostItemSmall
-                featureImage={require("../img/malaria.jpg")}
+                featureImage={require("../../img/malaria.jpg")}
                 title={"Mental Health : Cancer 2.0"}
+                topic={"Mental Health"}
               />
               <PostItemSmall
-                featureImage={require("../img/eye.png")}
+                featureImage={require("../../img/eye.png")}
                 title={"The Fight Against Malaria"}
+                topic={"Health"}
               />
             </div>
           </div>
