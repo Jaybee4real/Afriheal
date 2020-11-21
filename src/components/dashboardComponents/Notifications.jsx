@@ -3,11 +3,17 @@ import MessagePreview from "../MessagePreview";
 import CardComponent from "../CardComponent";
 
 export default class Notifications extends Component {
- 
+  // constructor(props) {
+  //   super(props);
+  // }
+  
   render() {
     return (
       <div className="notifications-container">
-        <i class="fal fa-times"></i>
+        <i
+          onClick={() => this.props.toggleNotification()}
+          className={`fal fa-times ${this.props.notificationSidebarOpen ? "active" : ""}`}
+        ></i>
         <div className="notification-section">
           <div className="title">
             Notifications
@@ -20,7 +26,7 @@ export default class Notifications extends Component {
             </div>
           </div>
 
-      <CardComponent />
+          <CardComponent />
         </div>
         <div className="notification-section">
           <div className="title">Messages</div>

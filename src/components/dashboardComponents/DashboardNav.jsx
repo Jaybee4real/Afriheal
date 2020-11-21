@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
 export default class DashboardNav extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
   render() {
     return (
       <div className="dashboard-nav">
-        <i id="mobile-nav-toggle" className="fal fa-bars"></i>
+        <i
+          id="mobile-nav-toggle"
+          onClick={() => this.props.toggleSidebar()}
+          className={this.props.sidebarOpen ? "fal fa-times" : "fal fa-bars"}
+        ></i>
         <div className="search-container">
           <div className="input-container">
-            <i class="fal fa-search"></i>
+            <i className="fal fa-search"></i>
             <input className="nav-search" placeholder="Search 'Ebola' " />
           </div>
         </div>

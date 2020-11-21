@@ -13,7 +13,7 @@ export default class CardComponent extends Component {
           <p>Your Appointment was approved by</p>
           <div className="detail">
             <div className="image">
-              <i class="fad fa-user-circle"></i>
+              <i className="fad fa-user-circle"></i>
             </div>
             <div className="text">
               <p className="name">Dr. Mercy Conrad</p>

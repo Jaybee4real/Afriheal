@@ -123,7 +123,8 @@ main {
     align-items: center;
     z-index: 2;
 
-    .fa-bars {
+    .fa-bars,
+    .fa-times {
       font-size: 2rem;
       position: relative;
       color: $theme-color;
@@ -416,19 +417,23 @@ main {
 
 @media (max-width: 1080px) {
   .notifications-container {
-    transform: translateX(100vw);
-    transition: 0.5s ease-in-out;
+    display: flex !important;
+    transition: .3s ease-in-out;
+    z-index: 4;
+    width: 20rem;
+    padding-top: 3.5rem;
+
+    .fa-times {
+      right: 2rem;
+      display: none;
+    }
   }
 
   .notification-bar-active .notifications-container {
     transform: translateX(-19rem) !important;
-    width: 20rem;
-    z-index: 4;
-    padding-top: 3.5rem;
-    padding-right: 0rem !important;
 
     .fa-times {
-      right: 2rem;
+      display: flex;
     }
   }
 
@@ -438,6 +443,10 @@ main {
 
   .dashboard-container .content {
     padding: 0.5rem 1rem;
+  }
+
+  .dashboard-container.notification-bar-active .row {
+    padding: .7rem;
   }
 
   .notification-bar-active main {
@@ -451,6 +460,15 @@ main {
 }
 
 @media (max-width: 680px) {
+  .dashboard-container {
+    main {
+      transition: 0.3s ease-in-out;
+    }
+    &.sidebar-open main {
+      transform: translateX(13rem) !important;
+    }
+  }
+
   .sidebar-container {
     transform: translateX(-100vw);
     transition: 0.5s ease-in-out;
@@ -473,7 +491,8 @@ main {
       display: none;
     }
 
-    .fa-bars {
+    .fa-bars,
+    .fa-times {
       display: flex !important;
     }
   }
@@ -488,7 +507,8 @@ main {
     padding: 0.7rem !important;
     padding-top: 1.5rem !important;
 
-    .fa-bars {
+    .fa-bars,
+    .fa-times {
       left: 0 !important;
       margin-right: 0.9rem;
     }

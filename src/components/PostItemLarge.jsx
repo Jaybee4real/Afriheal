@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 export default class PostItemLarge extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <div className="post-item-large-container">
@@ -26,14 +26,14 @@ export default class PostItemLarge extends Component {
         <div className="author-info">
           <div className="writer">
             <div className="image">
-              <i class="fad fa-user-circle"></i>
+              <i className="fad fa-user-circle"></i>
             </div>
             <div className="text">
               <p className="name">Dr. Mercy Conrad</p>
               <p className="org">LUTH</p>
             </div>
           </div>
-          <i class="fal fa-bookmark"></i>
+          <i className="fal fa-bookmark"></i>
         </div>
       </div>
     );

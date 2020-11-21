@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 
 export default class DashboardSidebar extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
   render() {
     return (
-      <div className="sidebar-container">
+      <div className={`sidebar-container ${this.props.sidebarOpen? "active" : ""}`} >
         <div className="logo"></div>
         <div className="sidebar-items-container">
           <div
@@ -35,7 +30,7 @@ export default class DashboardSidebar extends Component {
               this.props.activeScreen === "Community" ? "active" : ""
             }`}
           >
-            <i class="far fa-globe-africa"></i>
+            <i className="far fa-globe-africa"></i>
             Community
           </div>
           <div
@@ -44,7 +39,7 @@ export default class DashboardSidebar extends Component {
               this.props.activeScreen === "Messages" ? "active" : ""
             }`}
           >
-            <i class="fad fa-comments-alt"></i>
+            <i className="fad fa-comments-alt"></i>
             Messages
           </div>
           <div
@@ -53,7 +48,7 @@ export default class DashboardSidebar extends Component {
               this.props.activeScreen === "Profile" ? "active" : ""
             }`}
           >
-            <i class="fad fa-user"></i>
+            <i className="fad fa-user"></i>
             Profile
           </div>
         </div>
@@ -65,7 +60,7 @@ export default class DashboardSidebar extends Component {
             }`}
           >
             <i
-              class="fal fa-question-circle"
+              className="fal fa-question-circle"
               style={{
                 top: ".1rem",
               }}
@@ -79,7 +74,7 @@ export default class DashboardSidebar extends Component {
               this.props.activeScreen === "Help" ? "active" : ""
             }`}
           >
-            <i class="fad fa-user-circle"></i>
+            <i className="fad fa-user-circle"></i>
             <div className="subcontainer">
               <div className="name">John Doe</div>
               <div className="email">Johndoe@email.com</div>

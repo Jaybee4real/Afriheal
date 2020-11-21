@@ -13,7 +13,7 @@ export default class MessagePreview extends Component {
     return (
       <div className="message-container">
         <div className="image">
-          <i class="fad fa-user-circle"></i>
+          <i className="fad fa-user-circle"></i>
         </div>
         <div className="text">
           <p className="sender-name">Dr Mercy Conrad</p>

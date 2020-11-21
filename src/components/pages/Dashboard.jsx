@@ -17,6 +17,7 @@ export default class Dashboard extends Component {
       activeScreen: "Home",
       updateActiveScreen: this.updateActiveScreen,
       notificationSidebarOpen: false,
+      sidebarOpen: false,
     };
   }
 
@@ -24,6 +25,7 @@ export default class Dashboard extends Component {
     const updateActiveScreen = (arg) => {
       this.setState({
         activeScreen: arg,
+        sidebarOpen: false,
       });
     };
 
@@ -31,21 +33,33 @@ export default class Dashboard extends Component {
       this.setState({
         notificationSidebarOpen: !this.state.notificationSidebarOpen,
       });
-      console.log("clicked");
+    };
+
+    const toggleSidebar = () => {
+      this.setState({
+        sidebarOpen: !this.state.sidebarOpen,
+      });
+      console.log("clicked", this.state.sidebarOpen);
     };
 
     return (
       <div
-        className={`dashboard-container ${
-          this.state.notificationSidebarOpen ? "notification-bar-active" : ""
-        }`}
+        className={`dashboard-container 
+        ${this.state.notificationSidebarOpen ? "notification-bar-active" : ""}
+        ${this.state.sidebarOpen ? "sidebar-open" : ""}
+        `}
       >
         <Sidebar
           activeScreen={this.state.activeScreen}
           updateActiveScreen={updateActiveScreen}
+          sidebarOpen={this.state.sidebarOpen}
         />
         <main className="">
-          <DashboardNav toggleNotification={toggleNotification} />
+          <DashboardNav
+            toggleNotification={toggleNotification}
+            toggleSidebar={toggleSidebar}
+            sidebarOpen={this.state.sidebarOpen}
+          />
           <div style={{ paddingTop: "6rem" }}>
             {this.state.activeScreen === "Home" ? (
               <Home />
@@ -63,7 +77,7 @@ export default class Dashboard extends Component {
           </div>
         </main>
         <div>
-          <Notifications />
+          <Notifications toggleNotification={toggleNotification} />
         </div>
       </div>
     );

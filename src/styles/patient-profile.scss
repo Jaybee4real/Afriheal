@@ -1,6 +1,9 @@
+@import "../index.scss";
+
 .page {
-  padding-top: 6rem;
-  margin-left: 2rem;
+  margin: 1rem;
+
+
 
   .notice {
     display: flex;
@@ -12,7 +15,7 @@
     border-radius: 10px;
 
     .info {
-      color: #54bf9b;
+      color: $theme-color;
       font-size: 0.95rem;
       text-decoration: underline;
     }
@@ -25,6 +28,10 @@
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+
+    .fa-edit{
+      color:  $theme-color;
+    }
 
     .profile-avatar {
       display: flex;
@@ -42,7 +49,7 @@
       }
 
       .patient-name {
-        color: #54bf9b;
+        color: $theme-color;
       }
 
       .patient-email {
@@ -60,7 +67,7 @@
     .personal-info h2,
     .contact-info h2,
     .health-info h2 {
-      color: #54bf9b;
+      color: $theme-color;
       font-size: 1.2rem;
     }
 
@@ -145,12 +152,14 @@
     margin-top: 4rem;
 
     .title {
+      margin-left: 1rem;
       .fa-money-bill-wave {
         margin-right: 1rem;
+        color: $theme-color;
       }
 
       span {
-        color: #54bf9b;
+        color: $theme-color;
         font-size: 1.2rem;
       }
     }
@@ -176,7 +185,7 @@
       a {
         margin-top: 0.95rem;
         font-size: 1.2rem;
-        color: #54bf9b;
+        color: $theme-color;
         text-decoration: underline;
       }
     }
