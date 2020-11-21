@@ -18,7 +18,8 @@ export default class DashboardNav extends Component {
         <div className="right-side">
           <div
             onClick={() => this.props.toggleNotification()}
-            className="notifications-icon"
+            className={`notifications-icon ${this.props.notificationSidebarOpen ? "active" : ""}`}
+
           >
             <i className="fal fa-bell"></i>
           </div>

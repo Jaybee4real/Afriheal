@@ -42,6 +42,7 @@
     margin: 0.7rem;
     align-items: center;
     cursor: pointer;
+    transition: .3s ease-in-out;
 
     i {
       font-size: 1.2rem;
@@ -176,7 +177,7 @@ main {
       right: 0;
 
       .notifications-icon {
-        width: 2.3rem;
+        min-width: 2.3rem;
         height: 2.3rem;
         font-size: 1.2rem;
         color: $theme-color;
@@ -187,10 +188,10 @@ main {
         background-color: #d3d3d33b;
         margin-right: 2rem;
         cursor: pointer;
+        box-sizing: content-box;
         transition: all 0.3s ease-in-out;
 
-        &.active,
-        &:hover {
+        &.active{
           background-color: $theme-color;
           color: white;
         }
@@ -212,11 +213,27 @@ main {
 
 /////////////////////?Dashboard Home Styles///////////////////
 
+@keyframes slide-in{
+  0%{
+    transform: translateX(15rem);
+  }
+  100%{
+    transform: translateX(0rem);
+  }
+}
+
+.slide-in{
+  transform: translateX(0rem);
+  animation: slide-in .2s cubic-bezier(0.87, 0, 0.13, 1.3)
+}
+
 .home-wrapper {
   min-height: 200vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column;  
+
+
 
   .welcome {
     width: 96%;
@@ -296,8 +313,8 @@ main {
 
   .fa-times {
     position: fixed !important;
-    right: 4rem;
-    transform: translateY(-1.5rem);
+    // right: 4rem;
+    transform: translateY(-1.8rem) translateX(14rem);
     font-size: 1.4rem;
     background-color: white;
     padding-bottom: 0.2rem !important;
@@ -422,12 +439,15 @@ main {
     z-index: 4;
     width: 20rem;
     padding-top: 3.5rem;
+    transform: translateX(100vw);
 
     .fa-times {
       right: 2rem;
       display: none;
     }
   }
+
+  
 
   .notification-bar-active .notifications-container {
     transform: translateX(-19rem) !important;
@@ -442,14 +462,14 @@ main {
   }
 
   .dashboard-container .content {
-    padding: 0.5rem 1rem;
+    padding: 0rem;
   }
 
-  .dashboard-container.notification-bar-active .row {
+  .dashboard-container.notification-bar-active .row,.row {
     padding: .7rem;
   }
 
-  .notification-bar-active main {
+  .notification-bar-active main, main {
     width: calc(100vw - 13rem) !important;
   }
 
@@ -816,3 +836,4 @@ main {
     }
   }
 }
+

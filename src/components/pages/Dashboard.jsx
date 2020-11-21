@@ -39,7 +39,6 @@ export default class Dashboard extends Component {
       this.setState({
         sidebarOpen: !this.state.sidebarOpen,
       });
-      console.log("clicked", this.state.sidebarOpen);
     };
 
     return (
@@ -59,25 +58,28 @@ export default class Dashboard extends Component {
             toggleNotification={toggleNotification}
             toggleSidebar={toggleSidebar}
             sidebarOpen={this.state.sidebarOpen}
+            notificationSidebarOpen={this.state.notificationSidebarOpen}
           />
           <div style={{ paddingTop: "6rem" }}>
             {this.state.activeScreen === "Home" ? (
-              <Home />
+              <Home active/>
             ) : this.state.activeScreen === "Appointments" ? (
-              <Appointments />
+              <Appointments active/>
             ) : this.state.activeScreen === "Community" ? (
-              <Community />
+              <Community active/>
             ) : this.state.activeScreen === "Messages" ? (
-              <Messages />
+              <Messages active/>
             ) : this.state.activeScreen === "Profile" ? (
-              <Profile />
+              <Profile active/>
             ) : (
-              <Home />
+              <Home active={false}/>
             )}
           </div>
         </main>
-        <div>
-          <Notifications toggleNotification={toggleNotification} />
+        <div style={{position: "relative"}}>
+          <Notifications
+            toggleNotification={toggleNotification}
+          />
         </div>
       </div>
     );

@@ -5,7 +5,9 @@ import PostItemSmall from "../PostItemSmall";
 export default class DashboardHome extends Component {
   render() {
     return (
-      <div className="home-wrapper">
+      <div
+        className={`home-wrapper ${this.props.active === true ? "slide-in" : ""}`}
+      >
         <div className="welcome">
           <div className="left-side">
             <div className="heading">Welcome Ava,</div>
