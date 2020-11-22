@@ -1,0 +1,88 @@
+@import "../index.scss";
+
+.info-container {
+  width: 100%;
+  //   margin: 1rem;
+  background-color: #d5efe5;
+  background-image: url("../img/Afriheal_logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 11rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-side {
+    padding: 2rem;
+    .heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      margin-top: .7rem;
+      color: $theme-color;
+    }
+
+    .button {
+      font-size: 0.9rem;
+      padding-bottom: 0.3rem;
+      //   margin-top: 1rem;
+    }
+  }
+
+  .right-side {
+    min-height: 100%;
+    min-width: 320px;
+    width: 35%;
+    // background-image: url();
+  }
+}
+
+.content-wrapper {
+  // background-color: red;
+  margin: auto;
+  min-height: 100vh;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.appointments-history-section {
+  display: flex;
+  flex-direction: column;
+
+  .heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .heading {
+      font-size: 1.3rem;
+      color: $theme-color;
+    }
+
+    .date-selector {
+      display: flex;
+      flex-direction: row;
+
+      i {
+        padding: 0.3rem .5rem;
+        background-color: #d3d3d33b;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        color: #646464;
+        margin: 0 0.5rem;
+
+        &:hover {
+          background-color: #d3d3d39f;
+        }
+      }
+
+      .present-date {
+        padding: 0.3rem .7rem;
+        color: #646464;
+        background-color: #d3d3d33b;
+        border-radius: 5px;
+      }
+    }
+  }
+}

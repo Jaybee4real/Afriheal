@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import PostItemLarge from "../PostItemLarge";
-import PostItemSmall from "../PostItemSmall";
+import PostItemLarge from "./PostItemLarge";
+import PostItemSmall from "./PostItemSmall";
 
 export default class DashboardHome extends Component {
   render() {
     return (
       <div
-        className={`home-wrapper ${this.props.active === true ? "slide-in" : ""}`}
+        className={`home-wrapper ${
+          this.props.active === true ? "slide-in" : ""
+        }`}
       >
         <div className="welcome">
           <div className="left-side">

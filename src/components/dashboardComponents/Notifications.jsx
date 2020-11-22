@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import MessagePreview from "../MessagePreview";
-import CardComponent from "../CardComponent";
+import MessagePreview from "./MessagePreview";
+import CardComponent from "./CardComponent";
 
 export default class Notifications extends Component {
   // constructor(props) {
