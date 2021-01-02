@@ -9,6 +9,7 @@ import Community from "../dashboardComponents/Community";
 import Notifications from "../dashboardComponents/Notifications";
 
 import "../../styles/dashboard.scss";
+import BookAppointment from "../dashboardComponents/BookAppointment";
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -62,24 +63,25 @@ export default class Dashboard extends Component {
           />
           <div style={{ paddingTop: "6rem" }}>
             {this.state.activeScreen === "Home" ? (
-              <Home active/>
+              <Home active />
             ) : this.state.activeScreen === "Appointments" ? (
-              <Appointments active/>
+              <Appointments updateActiveScreen={updateActiveScreen} active />
             ) : this.state.activeScreen === "Community" ? (
-              <Community active/>
+              <Community active />
             ) : this.state.activeScreen === "Messages" ? (
-              <Messages active/>
+              <Messages active />
             ) : this.state.activeScreen === "Profile" ? (
-              <Profile active/>
+              <Profile active />
+            ) : /* Auxillary Screens */
+            this.state.activeScreen === "BookAppointment" ? (
+              <BookAppointment active />
             ) : (
-              <Home active={false}/>
+              <Home active={false} />
             )}
           </div>
         </main>
-        <div style={{position: "relative"}}>
-          <Notifications
-            toggleNotification={toggleNotification}
-          />
+        <div style={{ position: "relative" }}>
+          <Notifications toggleNotification={toggleNotification} />
         </div>
       </div>
     );

@@ -17,6 +17,86 @@
   transform: translateX(0) !important;
 }
 
+///////////Card Component//////////////
+
+.card-item {
+  padding: 1.2rem 1.2rem;
+  background-color: #d3d3d33b;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 280px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &:hover {
+    box-shadow: 1px 4px 15px 0 #06060615;
+  }
+
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    color: $theme-color;
+    margin-left: 0.5rem;
+  }
+
+  i {
+    color: grey !important;
+    cursor: pointer;
+  }
+
+  hr {
+    height: 1px;
+    margin: 1rem 0;
+    background-color: #ccc;
+    border: none;
+  }
+
+  .card-body {
+    p {
+      font-size: 0.8rem;
+      color: #333333;
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+    .image i {
+      font-size: 2rem;
+      margin-right: 0.5rem;
+      top: 0.1rem;
+    }
+
+    .text {
+      .name {
+        color: #111111;
+      }
+
+      .org {
+        color: #888888;
+      }
+    }
+  }
+
+  .link {
+    color: $theme-color;
+    font-size: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
 .sidebar-container {
   width: 12rem;
   height: 100vh;
@@ -115,7 +195,7 @@
 main {
   min-height: 100vh;
   margin-left: 12rem;
-  width: calc(100vw - 15rem);
+  width: calc(100vw - 12rem);
 
   .dashboard-nav {
     width: calc(100% - 13rem);
@@ -318,17 +398,44 @@ main {
 .notifications-container {
   position: fixed;
   height: 100vh;
-  min-width: 19rem;
+  min-width: 20rem;
   display: none;
   flex-direction: column;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 0;
   padding-top: 8rem;
   overflow-y: scroll;
 
+  .notification-item {
+    padding: 1.2rem 1.2rem;
+    background-color: #d3d3d33b;
+    font-size: 0.9rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    max-width: 280px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      box-shadow: 1px 4px 15px 0 #06060615;
+    }
+
+    &.important .notification-title {
+      color: red;
+    }
+
+    i {
+      color: grey !important;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+  }
+
   .fa-times {
     position: fixed !important;
-    // right: 4rem;
-    transform: translateY(-1.8rem) translateX(14rem);
+    z-index: 100;
+    transform: translateY(-1.8rem) translateX(16rem);
     font-size: 1.4rem;
     background-color: white;
     padding-bottom: 0.2rem !important;
@@ -371,75 +478,13 @@ main {
   .notification-section {
     margin-bottom: 3rem;
 
-    .notification-item {
-      padding: 1.2rem 10%;
-      background-color: #d3d3d33b;
-      font-size: 0.9rem;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      margin: 1rem 0;
-      cursor: pointer;
+    &:first-of-type {
+      margin-left: 0.8rem;
+    }
 
-      &:hover {
-        background-color: #d3d3d39f;
-      }
-
-      .notification-title {
-        display: flex;
-        justify-content: space-between;
-        color: $theme-color;
-      }
-
-      &.important .notification-title {
-        color: red;
-      }
-
-      i {
-        color: grey !important;
-        cursor: pointer;
-      }
-
-      hr {
-        height: 1px;
-        margin: 1rem 0;
-        background-color: #ccc;
-        border: none;
-      }
-
-      .notification-body {
-        p {
-          font-size: 0.8rem;
-          color: #333333;
-        }
-      }
-
-      .detail {
-        display: flex;
-        flex-direction: row;
-        margin: 2rem 0;
-        .image i {
-          font-size: 2rem;
-          margin-right: 0.5rem;
-          top: 0.1rem;
-        }
-
-        .text {
-          .name {
-            color: #111111;
-          }
-
-          .org {
-            color: #888888;
-          }
-        }
-      }
-
-      .download {
-        color: $theme-color;
-        font-size: 0.9rem;
-        text-align: center;
-        cursor: pointer;
+    &:nth-of-type(2) {
+      .title {
+        margin-left: 0.8rem;
       }
     }
   }
@@ -564,7 +609,7 @@ main {
 //////////////////////////////////////////
 
 .message-container {
-  width: 100%;
+  width: 97%;
   display: flex;
   flex-direction: row !important;
   justify-content: space-between;
@@ -572,10 +617,13 @@ main {
   margin-bottom: 0.5rem;
   cursor: pointer;
   padding: 1rem 0.3rem;
-  border-radius: 20px;
+  border-radius: 5px;
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
+  transition: all 0.25s ease;
 
   &:hover {
-    background-color: #d3d3d39f;
+    box-shadow: 1px 4px 15px 0 #06060615;
   }
 
   &:after {
@@ -586,13 +634,14 @@ main {
     background-color: #ccc;
     display: flex;
     left: 15%;
-    bottom: 0rem;
+    bottom: -0.5rem;
   }
 
   .image i {
     font-size: 2rem;
     margin-right: 0.7rem;
     color: grey;
+    margin-left: 0.5rem;
   }
 
   .text {
@@ -707,9 +756,10 @@ main {
     height: fit-content;
     border-radius: 20px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
-      background-color: #d3d3d39f;
+      box-shadow: 1px 4px 15px 0 #06060615;
     }
 
     img {
@@ -776,9 +826,10 @@ main {
     margin-bottom: 2rem;
     border-radius: 20px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
-      background-color: #d3d3d39f;
+      box-shadow: 1px 4px 15px 0 #06060615;
     }
 
     img {

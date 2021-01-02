@@ -44,6 +44,9 @@ export default class Main extends Component {
 
             {/* ////////////// */}
 
+
+            
+
             <div className="row">
               <div className="image"></div>
               <div className="text">

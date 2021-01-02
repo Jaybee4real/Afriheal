@@ -6,13 +6,15 @@ export default class Notifications extends Component {
   // constructor(props) {
   //   super(props);
   // }
-  
+
   render() {
     return (
       <div className="notifications-container">
         <i
           onClick={() => this.props.toggleNotification()}
-          className={`fal fa-times ${this.props.notificationSidebarOpen ? "active" : ""}`}
+          className={`fal fa-times ${
+            this.props.notificationSidebarOpen ? "active" : ""
+          }`}
         ></i>
         <div className="notification-section">
           <div className="title">
@@ -26,7 +28,13 @@ export default class Notifications extends Component {
             </div>
           </div>
 
-          <CardComponent />
+          <CardComponent
+            linePosition="top"
+            heading="Reminder"
+            preInfo="Your appointment has been aproved by"
+            linkText="Download iCal"
+            hasIcon
+          />
         </div>
         <div className="notification-section">
           <div className="title">Messages</div>

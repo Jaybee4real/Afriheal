@@ -3,14 +3,18 @@ import React, { Component } from "react";
 export default class CardComponent extends Component {
   render() {
     return (
-      <div className="notification-item">
-        <div className="notification-title">
-          Reminder
-          <i className="fa fa-chevron-right"></i>
-        </div>
-        <hr />
-        <div className="notification-body">
-          <p>Your Appointment was approved by</p>
+      <div className="card-item">
+        {this.props.heading ? (
+          <div className="card-title">
+            {this.props.heading}
+            {this.props.hasIcon ? <i className="fa fa-chevron-right"></i> : ""}
+          </div>
+        ) : (
+          ""
+        )}
+        {this.props.linePosition === "top" ? <hr /> : ""}
+        <div className="card-body">
+          <p>{this.props.preInfo}</p>
           <div className="detail">
             <div className="image">
               <i className="fad fa-user-circle"></i>
@@ -20,7 +24,8 @@ export default class CardComponent extends Component {
               <p className="org">LUTH</p>
             </div>
           </div>
-          <div className="download">Download iCal</div>
+          {this.props.linePosition === "bottom" ? <hr /> : ""}
+          <div className="link">{this.props.linkText}</div>
         </div>
       </div>
     );

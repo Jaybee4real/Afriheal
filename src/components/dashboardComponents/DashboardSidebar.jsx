@@ -3,7 +3,11 @@ import React, { Component } from "react";
 export default class DashboardSidebar extends Component {
   render() {
     return (
-      <div className={`sidebar-container ${this.props.sidebarOpen? "active" : ""}`} >
+      <div
+        className={`sidebar-container ${
+          this.props.sidebarOpen ? "active" : ""
+        }`}
+      >
         <div className="logo"></div>
         <div className="sidebar-items-container">
           <div
@@ -18,7 +22,10 @@ export default class DashboardSidebar extends Component {
           <div
             onClick={() => this.props.updateActiveScreen("Appointments")}
             className={`sidebar-item ${
-              this.props.activeScreen === "Appointments" ? "active" : ""
+              this.props.activeScreen === "Appointments" ||
+              this.props.activeScreen === "BookAppointment"
+                ? "active"
+                : ""
             }`}
           >
             <i className="far fa-calendar-day"></i>
