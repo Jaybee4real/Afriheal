@@ -13,6 +13,17 @@
   margin: 1rem;
 }
 
+.screen-title {
+  font-size: 1.4rem;
+  color: $theme-color;
+  margin: 1rem;
+  margin-bottom: 2rem;
+
+  i{
+    margin-right: .7rem;
+  }
+}
+
 .untranslated {
   transform: translateX(0) !important;
 }

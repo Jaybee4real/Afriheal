@@ -10,6 +10,10 @@ export default class Appointments extends Component {
           this.props.active === true ? "slide-in" : ""
         }`}
       >
+        <div className="screen-title">
+          <i className="far fa-calendar-day"></i>Appointments
+        </div>
+
         <div className="info-container">
           <div className="left-side">
             <div className="heading">

@@ -8,8 +8,9 @@ export default class BookAppointment extends Component {
           this.props.active === true ? "slide-in" : ""
         }`}
       >
-        <div className="">
-          <h3>Book Appointment Screen</h3>
+        <div className="screen-title">
+          <i className="far fa-calendar-day"></i>
+          Appointments
         </div>
       </div>
     );
