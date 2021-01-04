@@ -14,8 +14,8 @@ import BookAppointment from "../dashboardComponents/BookAppointment";
 export default class Dashboard extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeScreen: "Home",
+    this.state = { 
+      activeScreen: "BookAppointment",
       updateActiveScreen: this.updateActiveScreen,
       notificationSidebarOpen: false,
       sidebarOpen: false,
